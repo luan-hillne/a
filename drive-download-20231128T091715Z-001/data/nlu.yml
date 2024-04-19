@@ -1,0 +1,469 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Xin chào
+    - Bạn ơi cho mình hỏi
+    - em ơi, cho anh hỏi
+    - em ơi, cho chị hỏi
+    - xin chào
+    - xin chào !
+    - xinn chào
+    - có ai ko
+    - có ai ở đây không
+    - is there anyone
+    - anyone here
+    - chào
+    - có ai không
+    - alo
+    - cốc cốc
+    - chào em
+    - cứu với
+    - giúp tôi
+    - giúp với
+    - cứu
+    - xin chao
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - chào nhé
+    - tạm biệt
+    - chào tạm biệt
+    - bai bai
+    - bai
+    - bái bai
+    - bb
+    - nói chuyện sau nhé
+    - tạm bịt
+    - bai bot
+    - gút bai
+    - good bye
+    - baibai
+
+- intent: affirm
+  examples: |
+    - chốt
+    - đồng ý
+    - ok
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - đúng rồi
+    - được
+    - tôi chấp nhận
+    - oke
+    - ok luôn
+    - chuẩn luôn
+    - quá chuẩn
+    - tuyệt vời
+    - rất tốt
+    - tuyệt
+    - đáng kinh ngạc
+    - hoàn hảo
+    - tôi cảm thấy rất tuyệt
+    - tôi rất khỏe
+    - tôi rất tốt
+    - có
+    - ừ
+    - okie
+    - oki
+    - uk
+    - uki
+    - ukie
+    - uh
+    - uhm
+    - yeah
+    - đc
+    - cũng được
+    - ừm
+    - ừm oke
+    - nhất trí
+    - quyết định vậy nhé
+
+- intent: deny
+  examples: |
+    - no
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - khong
+    - không đâu
+    - đéo
+    - không đồng ý
+    - không thích
+    - ko
+    - cc
+    - không nhé
+    - không bao giờ
+    - tôi không nghĩ vậy
+    - không đời nào
+    - hoàn toàn không
+    - không
+
+- intent: thanks
+  examples: |
+    - cảm ơn em nhá
+    - thanks em nha
+    - cảm ơn nha
+    - good job
+    - thank you
+    - cảm ơn bot nha
+    - thanks bot
+    - cảm ơn
+    - thank you so much
+    - great! Thanks
+    - Cảm ơn em
+    - tốt quá
+    - ngân hàng làm rất tốt
+    - tốt thật
+    - tuyệt vời
+    - rất nhanh
+    - giỏi quá
+    - bot thông minh đấy
+    - hay phết nhỉ
+    - tốt đấy
+    - tôi rất hài lòng
+    - chatbot mạnh dữ
+    - thông minh quá ta
+    - giỏi
+    - hay
+    - ổn phết
+    - xong rồi cảm ơn
+
+- intent: ask_service_name
+  examples: |
+    - có những dịch vụ gì nhỉ
+    - [Chị](cust_sex) muốn xem danh sách dịch vụ
+    - [Anh](cust_sex) muốn xem danh sách dịch vụ
+    - [Em](cust_sex) muốn xem danh sách dịch vụ
+    - mình muốn xem danh sách dịch vụ
+    - tôi muốn xem danh sách dịch vụ
+    - [chú](cust_sex) muốn xem danh sách dịch vụ
+    - [bác](cust_sex) muốn xem danh sách dịch vụ
+    - [cô](cust_sex) muốn xem danh sách dịch vụ
+    - cho [Chị](cust_sex) xem danh sách dịch vụ
+    - cho [Anh](cust_sex) xem danh sách dịch vụ
+    - cho [Em](cust_sex) xem danh sách dịch vụ
+    - cho [chú](cust_sex) xem danh sách dịch vụ
+    - cho [bác](cust_sex) xem danh sách dịch vụ
+    - cho [cô](cust_sex) xem danh sách dịch vụ
+    - có những dịch vụ gì
+    - cho tôi xem dịch vụ
+    - hỏi dịch vụ
+    - co dich vu nao
+    - Bên em có những dịch vụ gì
+    - dich vu
+    - hoi dich vu
+    - tôi muốn hỏi dịch vụ
+    - xem dịch vụ
+    - bạn có thể làm gì nào
+    - em có thể giúp gì cho tôi
+    - bạn biết làm gì
+    - mày được việc không
+    - [chị](cust_sex) muốn xem dịch vụ bên em
+    - có mấy dịch vụ nhỉ?
+    - bot có gì
+    - bot làm được gì
+    - bot biết gì
+    - giúp gì
+    - giúp được gì
+
+- intent: information_banking_check_money
+  examples: |
+    - [Chị](cust_sex) muốn tìm hiểu về số dư tài khoản
+    - [Anh](cust_sex) tìm hiểu số dư tài khoản
+    - Em muốn tìm hiểu số dư
+    - mình muốn tìm hiểu số dư
+    - tôi muốn tìm hiểu số dư tài khoản ngân hàng
+    - [chú](cust_sex) muốn tìm hiểu số dư ngân hàng
+    - [bác](cust_sex) muốn tìm hiểu số dư tài khoản ngân hàng
+    - [cô](cust_sex) muốn tìm hiểu số dư
+    - Tìm hiểu số dư tài khoản ngân hàng
+    - Tìm hiểu số dư
+    - Tìm hiểu số dư tài khoản
+    - Số dư là gì
+    - Số dư tài khoản là gì
+    - Số dư tài khoản ngân hàng là gì
+
+- intent: information_log_in
+  examples: |
+    - [Chị](cust_sex) muốn tìm hiểu về đăng nhập tài khoản
+    - [Anh](cust_sex) tìm hiểu đăng nhập tài khoản
+    - Em muốn tìm hiểu đăng nhập
+    - mình muốn tìm hiểu chức năng đăng nhập
+    - tôi muốn tìm hiểu đăng nhập tài khoản ngân hàng
+    - [chú](cust_sex) muốn tìm hiểu đăng nhập ngân hàng
+    - [bác](cust_sex) muốn tìm hiểu đăng nhập tài khoản ngân hàng
+    - [cô](cust_sex) muốn tìm hiểu đăng nhập
+    - Tìm hiểu đăng nhập tài khoản ngân hàng
+    - Tìm hiểu đăng nhập
+    - Tìm hiểu đăng nhập tài khoản
+    - Tìm hiểu chức năng đăng nhập tài khoản
+    - đăng nhập là gì
+    - đăng nhập tài khoản là gì
+    - đăng nhập tài khoản ngân hàng là gì
+    - chức năng đăng nhập là gì
+    - chức năng đăng nhập tài khoản là gì
+    - chức năng đăng nhập tài khoản ngân hàng là gì
+
+- intent: information_banking_transfer
+  examples: |
+    - [Chị](cust_sex) muốn tìm hiểu về chức năng chuyển khoản
+    - [Anh](cust_sex) tìm hiểu chức năng chuyển khoản
+    - Em muốn tìm hiểu chuyển khoản
+    - mình muốn tìm hiểu chuyển khoản
+    - mình muốn tìm hiểu chuyển tiền
+    - tôi muốn tìm hiểu chuyển khoản ngân hàng
+    - tôi muốn tìm hiểu chuyển tiền ngân hàng
+    - [chú](cust_sex) muốn tìm hiểu chuyển khoản ngân hàng
+    - [bác](cust_sex) muốn tìm hiểu chuyển khoản ngân hàng
+    - [cô](cust_sex) muốn tìm hiểu chuyển khoản
+    - Tìm hiểu chuyển khoản ngân hàng
+    - Tìm hiểu chuyển khoản
+    - Tìm hiểu chuyển tiền
+    - Tìm hiểu chuyển tiền ngân hàng
+    - chuyển khoản là gì
+    - chức năng chuyển khoản là gì
+    - chức năng chuyển khoản ngân hàng là gì
+    - chuyển tiền là gì
+    - chức năng chuyển tiền là gì
+    - chức năng chuyển tiền ngân hàng là gì
+
+- intent: information_banking_create_account
+  examples: |
+    - [Chị](cust_sex) muốn tìm hiểu về chức năng tạo tài khoản
+    - [Anh](cust_sex) tìm hiểu chức năng tạo tài khoản
+    - Em muốn tìm hiểu tạo tài khoản
+    - mình muốn tìm hiểu tạo tài khoản
+    - mình muốn tìm hiểu đăng kí tài khoản
+    - tôi muốn tìm hiểu tạo tài khoản ngân hàng
+    - tôi muốn tìm hiểu về đăng kí tài khoản
+    - tôi muốn tìm hiểu về đăng ký tài khoản
+    - tôi muốn tìm hiểu về chức năng đăng kí tài khoản
+    - [chú](cust_sex) muốn tìm hiểu tạo tài khoản ngân hàng
+    - [bác](cust_sex) muốn tìm hiểu tạo tài khoản ngân hàng
+    - [cô](cust_sex) muốn tìm hiểu tạo tài khoản
+    - Tìm hiểu tạo tài khoản ngân hàng
+    - Tìm hiểu tạo tài khoản
+    - Tìm hiểu về đăng kí tài khoản
+    - Tìm hiểu tạo tài khoản ngân hàng
+    - tạo tài khoản là gì
+    - đăng kí tài khoản là gì
+    - đăng ký tài khoản là gì
+    - đăng kí tài khoản ngân hàng là gì
+    - đăng ký tài khoản ngân hàng là gì
+    - chức năng tạo tài khoản là gì
+    - chức năng tạo tài khoản ngân hàng là gì
+
+- intent: check_money
+  examples: |
+    - [Chị](cust_sex) muốn [check số dư tài khoản](service_name)
+    - [Anh](cust_sex) muốn [check số dư tài khoản](service_name)
+    - Em muốn [check số dư tài khoản](service_name)
+    - mình muốn [check số dư tài khoản](service_name)
+    - tôi muốn [check số dư tài khoản](service_name)
+    - [chú](cust_sex) muốn [check số dư tài khoản](service_name)
+    - [bác](cust_sex) muốn [check số dư tài khoản](service_name)
+    - [cô](cust_sex) muốn [check số dư tài khoản](service_name)
+    - [anh](cust_sex) muốn [check số dư tài khoản](service_name)
+    - kiểm tra số dư tài khoản
+    - [xem số dư](service_name)
+
+- intent: bank_transfer
+  examples: |
+    - [Chị](cust_sex) muốn [chuyển tiền](service_name)
+    - [Anh](cust_sex) muốn [chuyển tiền tài khoản](service_name)
+    - Em muốn [chuyển tiền tài khoản](service_name)
+    - mình muốn [chuyển tiền tài khoản](service_name)
+    - mình muốn [chuyển tiền](service_name)
+    - tôi muốn [chuyển tiền tài khoản](service_name)
+    - [chú](cust_sex) muốn [chuyển tiền tài khoản](service_name)
+    - [bác](cust_sex) muốn [chuyển tiền tài khoản](service_name)
+    - [cô](cust_sex) muốn [chuyển tiền tài khoản](service_name)
+    - [anh](cust_sex) muốn [chuyển tiền tài khoản](service_name)
+    - sử dụng chắc năng chuyển tiền tài khoản
+    - [chuyển tiền](service_name)
+
+- intent: samebank_transfer
+  examples: |
+    - [Chị](cust_sex) muốn [chuyển tiền cùng ngân hàng](service_name)
+    - [Anh](cust_sex) muốn [chuyển tiền tài khoản cùng ngân hàng](service_name)
+    - Em muốn [chuyển tiền tài khoản cùng ngân hàng](service_name)
+    - mình muốn [chuyển tiền tài khoản cùng ngân hàng](service_name)
+    - mình muốn [chuyển tiền cùng ngân hàng](service_name)
+    - tôi muốn [chuyển tiền tài khoản cùng ngân hàng](service_name)
+    - [chú](cust_sex) muốn [chuyển tiền tài khoản cùng ngân hàng](service_name)
+    - [bác](cust_sex) muốn [chuyển tiền tài khoản cùng ngân hàng](service_name)
+    - [cô](cust_sex) muốn [chuyển tiền tài khoản cùng ngân hàng](service_name)
+    - [anh](cust_sex) muốn [chuyển tiền tài khoản cùng ngân hàng](service_name)
+    - sử dụng chắc năng chuyển tiền tài khoản cùng ngân hàng
+    - [chuyển tiền cùng ngân hàng](service_name)
+
+- intent: interbank_transfer
+  examples: |
+    - [Chị](cust_sex) muốn [chuyển tiền liên ngân hàng](service_name)
+    - [Anh](cust_sex) muốn [chuyển tiền tài khoản liên ngân hàng](service_name)
+    - Em muốn [chuyển tiền tài khoản liên ngân hàng](service_name)
+    - mình muốn [chuyển tiền tài khoản liên ngân hàng](service_name)
+    - mình muốn [chuyển tiền liên ngân hàng](service_name)
+    - tôi muốn [chuyển tiền tài khoản liên ngân hàng](service_name)
+    - [chú](cust_sex) muốn [chuyển tiền tài khoản liên ngân hàng](service_name)
+    - [bác](cust_sex) muốn [chuyển tiền tài khoản liên ngân hàng](service_name)
+    - [cô](cust_sex) muốn [chuyển tiền tài khoản liên ngân hàng](service_name)
+    - [anh](cust_sex) muốn [chuyển tiền tài khoản liên ngân hàng](service_name)
+    - sử dụng chắc năng chuyển tiền tài khoản liên ngân hàng
+    - [chuyển tiền liên ngân hàng](service_name)
+
+- intent: cust_sign_in
+  examples: |
+    - [anh](cust_sex) muốn [đăng nhập tài khoản](service_name)
+    - [chú](cust_sex) muốn [đăng nhập tài khoản](service_name)
+    - [bác](cust_sex) muốn [đăng nhập tài khoản](service_name)
+    - [chị](cust_sex) muốn [đăng nhập tài khoản](service_name)
+    - [cô](cust_sex) muốn [đăng nhập tài khoản](service_name)
+    - [em](cust_sex) muốn [đăng nhập tài khoản](service_name)
+    - tôi muốn [đăng nhập tài khoản](service_name)
+    - mình muốn [đăng nhập tài khoản](service_name)
+    - đăng nhập tài khoản
+    - tôi muốn đăng nhập
+    - cho tôi đăng nhập
+    - [đăng nhập](service_name)
+    - dang nhap
+    - [đăg nhập](service_name)
+
+- intent: so_tai_khoan
+  examples: |
+    - [12445689](account_number)
+    - [12456789](account_number)
+    - [12121212](account_number)
+    - [35792173](account_number)
+    - [87314713](account_number)
+    - số tài khoản là [87314713](account_number)
+    - số tài khoản [12121212](account_number)
+
+- intent: mat_khau
+  examples: |
+    - [abc111](password)
+    - [xyz111](password)
+    - [hkj185](password)
+    - [hde159](password)
+    - [nnn238](password)
+    - [lkf734](password)
+    - [loc999](password)
+    - [lsd865](password)
+    - [pux469](password)
+    - [qzm372](password)
+    - mật khẩu là [vcs156](password)
+    - mật khẩu [ndx583](password)
+    - mật khẩu của tôi [ggg428](password)
+
+- intent: ho_va_ten
+  examples: |
+    - [Nguyễn Hữu Đạt](name)
+    - [Phạm Thị Thu Uyên](name)
+    - [Lương Sơn Bạc](name)
+    - [Vũ Văn Hùng](name)
+    - [Trịnh Hoàng Anh Lai](name)
+    - [Vũ Thế Phương](name)
+    - [Đoàn Thị Dân](name)
+    - [Giang Thanh Hải](name)
+    - [Đào Phương Thảo](name)
+    - [Hoàng Văn Thái](name)
+    - [Lưu Khánh Ly](name)
+    - [Chu Thị Ngọc Anh](name)
+    - [Phùng Thị Lan Ly](name)
+    - [Dương Thị NGọc Anh](name)
+    - [Đinh Thị Diệu Linh](name)
+    - [Âu Dương Phong](name)
+    - [Mai Lương Hoài Phương](name)
+    - tên là [Bùi Vân Khánh](name)
+    - tên [đặng thúy hiền](name)
+    - tên của tôi [Trần Đức Long](name)
+    - tên tài khoản [Lê Thị Thủy Tiên](name)
+    - tên chủ thẻ [Hà Huyền Trang](name)
+    - chủ thẻ [Đõ Thị Chung](name)
+    - chủ tài khoản [Kiều Phương Quỳnh](name)
+
+- intent: create_account
+  examples: |
+    - [anh](cust_sex) muốn [tạo tài khoản](service_name)
+    - [chú](cust_sex) muốn [tạo tài khoản](service_name)
+    - [bác](cust_sex) muốn [tạo tài khoản](service_name)
+    - [chị](cust_sex) muốn [tạo tài khoản](service_name)
+    - [cô](cust_sex) muốn [tạo tài khoản](service_name)
+    - [em](cust_sex) muốn [tạo tài khoản](service_name)
+    - tôi muốn [tạo tài khoản](service_name)
+    - mình muốn [tạo tài khoản](service_name)
+    - tạo tài khoản
+    - tôi muốn tạo tài khoản
+    - cho tôi tạo tài khoản
+    - [tạo tài khoản ngân hàng](service_name)
+    - tạo tài khoản ngân hàng
+    - [đăng kí tài khoản ngân hàng](service_name)
+    - [anh](cust_sex) muốn [đăng kí tài khoản](service_name)
+    - [chú](cust_sex) muốn [đăng kí tài khoản](service_name)
+    - [bác](cust_sex) muốn [đăng kí tài khoản](service_name)
+    - [chị](cust_sex) muốn [đăng kí tài khoản](service_name)
+    - [cô](cust_sex) muốn [đăng kí tài khoản](service_name)
+    - [em](cust_sex) muốn [đăng kí tài khoản](service_name)
+    - tôi muốn [đăng kí tài khoản](service_name)
+    - mình muốn [đăng kí tài khoản](service_name)
+    - đăng kí tài khoản
+    - cho tôi đăng kí tài khoản
+    - đăng kí tài khoản ngân hàng
+    - [đăng ký tài khoản ngân hàng](service_name)
+    - [anh](cust_sex) muốn [đăng ký tài khoản](service_name)
+    - [chú](cust_sex) muốn [đăng ký tài khoản](service_name)
+    - [bác](cust_sex) muốn [đăng ký tài khoản](service_name)
+    - [chị](cust_sex) muốn [đăng ký tài khoản](service_name)
+    - [cô](cust_sex) muốn [đăng ký tài khoản](service_name)
+    - [em](cust_sex) muốn [đăng ký tài khoản](service_name)
+    - tôi muốn [đăng ký tài khoản](service_name)
+    - mình muốn [đăng ký tài khoản](service_name)
+    - đăng ký tài khoản
+    - cho tôi đăng ký tài khoản
+    - đăng ký tài khoản ngân hàng
+
+- regex: account_number
+  examples: |
+    - \d{8,12}
+- regex: password
+  examples: |
+    - [a-zA-Z]{3}[0-9]{3}
+
+#- regex: cmnd
+#  examples: |
+#    - \d{9,12}
+#- regex: name
+#  examples: |
+#    - [A-EGHIK-VXYÂĐỔÔÚỨa-eghik-vxyàáâãèéêìíòóôõùúýỳỹỷỵựửữừứưụủũợởỡờớơộổỗồốọỏịỉĩệểễềếẹẻẽặẳẵằắăậẩẫầấạảđ₫]

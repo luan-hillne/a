@@ -1,0 +1,320 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - mood_great
+  - mood_unhappy
+  - bot_challenge
+  - give_name
+  - ask_quytrinh
+  - ask_tiepnhanyeucauphanmem
+  - purpose_guibanduthaoPYCphanmem
+  - dkkichhoat_guibanduthaoPYCphanmem
+  - thongtindauvao_guibanduthaoPYCphanmem
+  - where_does_PYC_come_from?
+  - what_does_PYC's_need_to_ensure?
+  - input_guibanduthaoPYCphanmem
+  - content_guibanduthaoPYCphanmem
+  - output_guibanduthaoPYCphanmem
+  - DVTH_guibanduthaoPYCphanmem
+  - TGTH_guibanduthaoPYCphanmem
+  - implementation_tool_guibanduthaoPYCphanmem
+  - purpose_lamroPYCbaitoan
+  - dkkichhoat_lamroPYCbaitoan
+  - thongtindauvao_lamroPYCbaitoan
+  - evaluate_PYC
+  - ask_PYCnong
+  - lamroyeucau_lamroPYCbaitoan
+  - thoigianlamro_lamroPYCbaitoan
+  - input_lamroPYCbaitoan
+  - content_lamroPYCbaitoan
+  - output_lamroPYCbaitoan
+  - DVTH_lamroPYCbaitoan
+  - TGTH_lamroPYCbaitoan
+  - implementation_tool_lamroPYCbaitoan
+  - purpose_hoanthiennoidungPYC
+  - dkkichhoat_hoanthiennoidungPYC
+  - thongtindauvao_hoanthiennoidungPYC
+  - input_hoanthiennoidungPYC
+  - content_hoanthiennoidungPYC
+  - output_hoanthiennoidungPYC
+  - DVTH_hoanthiennoidungPYC
+  - TGTH_hoanthiennoidungPYC
+  - implementation_tool_hoanthiennoidungPYC
+  - purpose_guiPYCvaoEmail
+  - dkkichhoat_guiPYCvaoEmail
+  - thongtindauvao_guiPYCvaoEmail
+  - input_guiPYCvaoEmail
+  - content_guiPYCvaoEmail
+  - output_guiPYCvaoEmail
+  - DVTH_guiPYCvaoEmail
+  - TGTH_guiPYCvaoEmail
+  - implementation_tool_guiPYCvaoEmail
+  - purpose_phanboPYCchoBA
+  - dkkichhoat_phanboPYCchoBA
+  - thongtindauvao_phanboPYCchoBA
+  - input_phanboPYCchoBA
+  - content_phanboPYCchoBA
+  - output_phanboPYCchoBA
+  - DVTH_phanboPYCchoBA
+  - TGTH_phanboPYCchoBA
+  - implementation_tool_phanboPYCchoBA
+  - ask_service_name
+
+entities:
+  - cust_sex
+  - cust_name
+
+slots:
+  cust_sex:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: cust_sex
+  cust_name:
+    type: text
+    influence_conversation: false
+    mappings:
+    - type: from_entity
+      entity: cust_name
+
+responses:
+  utter_greet:
+  - text: "Chào bạn. Bạn có thể cho mình biết tên để xưng hô được không ạ?"
+
+  utter_greet_with_name:
+  - text: "Kính chào {cust_sex} {cust_name}. Tôi có thể giúp gì được {cust_sex} {cust_name} ạ?"
+
+  utter_cheer_up:
+  - text: "Here is something to cheer you up:"
+    image: "https://i.imgur.com/nGF1K8f.jpg"
+
+  utter_did_that_help:
+  - text: "Did that help you?"
+  - text: "Thứ đó có giup sgif cho bạn không ạ?"
+
+  utter_happy:
+  - text: "Great, carry on!"
+
+  utter_goodbye:
+  - text: "Bye"
+  - text: "Tạm biệt quý khách, chúc quý khách một ngày tốt lành?"
+
+  utter_iamabot:
+  - text: "I am a bot, powered by Rasa."
+  - text: "Tôi là bot"
+
+  utter_ask_quytrinh:
+  - text: "Quy trình phối hợp xây dựng/nâng cấp phần mêm gồm 6 bước:
+           \nI. Tiếp nhận yêu cầu phần mêm
+           \nII. Xây dựng tài liệu giải pháp
+           \nIII. ULNL, thống nhất kế hoạch với ĐVYC
+           \nIV. Phát triển phần mềm
+           \nV. Nghiệm thu, triển khai với ĐVYC
+           \nVI. Hỗ trợ sau triển khai"
+          
+  utter_ask_service_name:
+  - text: "Tôi có thể cho bạn biết về:
+           \n- Các bước của quy trình phối hợp xây dựng/nâng cấp phần mềm.
+           \n- Các bước của phần I.Tiếp nhận yêu cầu phần mềm.
+           \n- Nội dung các bước phần I: đầu vào, nội dung thực hiện, đầu ra, đơn vị thực hiện, thời gian thực hiện, công cụ thực hiện."
+
+# I.1. Gửi bản dự thảo PYC phần mềm
+  utter_ask_tiepnhanyeucauphanmem:
+  - text: "\nTiếp nhận yêu cầu phần mềm gồm 5 bước:
+           \n1. Gửi bản dự thảo PYC phần mềm
+           \n2. Làm rõ PYC bài toán (Bài toán khả thi hay không? Nếu có thì sang bước 3)
+           \n3. Hoàn thiện nội dung PYC, trình ký lãnh đạo các đơn vị
+           \n4. Gửi PYC bản ký vào email tiếp nhận chung của TTCNTT
+           \n5. Phân bổ PYC cho BA chuyên trách"
+
+  utter_purpose_guibanduthaoPYCphanmem:
+  - text: "Mục đích của nó là: ĐVYC gửi cho đầu mối BA chuyên trách hệ thống xem trước các nội dung thay đổi phần mềm dự kiến."
+  - text: "Mục đích: ĐVYC gửi cho đầu mối BA chuyên trách hệ thống xem trước các nội dung thay đổi phần mềm dự kiến."
+
+  utter_dkkichhoat_guibanduthaoPYCphanmem:
+  - text: "Điều kiện kích hoạt: 
+           \n- Yêu cầu phần mềm phát sinh từ các nguồn trong Tổng Công ty"
+
+  utter_thongtindauvao_guibanduthaoPYCphanmem:
+  - text: "Thông tin đầu vào:
+           \n- PYC dự thảo từ các đơn vị VCC.
+           \n- Kết luận của Ban Tổng Giám Đốc.
+           \n- Kế hoạch phát triển phần mềm của TTCNTT.
+           \n- Quy trình/quy định có liên quan đến PYC (nếu có).
+           \n- Kế hoạch phát triển phần mềm hàng tháng thống nhất giữa TTCNTT và ĐVYC."
+
+  utter_where_does_PYC_come_from?:
+  - text: "- PYC phần mềm xuất phát từ 3 nguồn chính sau: Kết luận của BTGĐ, nhu cầu quản lý trên phần mềm của các trung tâm/phòng ban hoặc kế hoạch phát triển phần mềm của TTCNTT.
+           \n- Khi có nhu cầu phát sinh, đầu mối ĐVYC gửi bản dự thảo PYC theo biểu mẫu BM01 cho BA chuyên trách hệ thống thuộc P. PTNV."
+
+  utter_what_does_PYC's_need_to_ensure?:
+  - text: "- PYC của đơn vị cần đảm bảo rõ ràng về các thông tin sau
+           \n+) Chức năng hệ thống thay đổi là gì? Hiện trạng và mong muốn thay đổi như thế nào? Luồng quy trình nghiệp vụ thay đổi và các hệ thống/chức năng cần nâng cấp tương ứng là gì? Các quy trình/quy định liên quan nội dung nâng cấp (nếu có), nếu là xây dựng báo cáo thì cần có biểu mẫu.
+           \n+) Mỗi PYC chỉ nên nâng cấp cho một hệ thống, nếu có tương tác với hệ thống khác thì mô hình tương tác thế nào? Các thông tin liên kết là gì?"
+
+  utter_evaluate_PYC:
+  - text: "- Vào các ngày cuối tháng, TTCNTT thống nhất với các ĐVYC về kế hoạch phát triển phần mềm đối với các PYC tồn (PYC đang thực hiện, PYC mới phát sinh) dựa trên nguồn lực nội bộ và thuê ngoài có thể đáp ứng. Các bên thống nhất danh sách các PYC ưu tiên phát triển, các PYC phát triển sau, các PYC cần hủy (nếu có),…cho tháng tiếp theo."
+           
+  utter_ask_PYCnong:
+  - text: "- PYC được coi là nóng gấp nếu thuộc 1 trong 3 trường hợp nêu ở phần III mục 1.2 nêu trên và được ưu tiên thực hiện trước so với PYC thường. Tỷ lệ PYC nóng gấp trong tháng của dự án/hệ thống không vượt quá 20% nỗ lực thực hiện so với các PYC thường (ĐVYC bắt buộc phải đính kèm văn bản ký của BTGĐ Tập đoàn/BGĐ Tổng Công ty/văn bản có liên quan của nhà nước được phê duyệt làm sở cứ). Khi đó, TTCNTT được phép thống nhất lùi triển khai PYC thường nếu không còn đủ nguồn lực thực hiện."
+
+  utter_content_guibanduthaoPYCphanmem:
+  - text: "Nội dung của gửi bản dự thảo PYC phần mêm gồm:
+           \n- PYC phần mềm xuất phát từ đâu?
+           \n- PYC cần đảm bảo những gì?
+           \n- Đánh giá các PYC
+           \n- PYC nào được coi là nóng?
+           \nBạn muốn hỏi nội dung của phần nào?"
+
+  utter_output_guibanduthaoPYCphanmem:
+  - text: "- BM01.QT.VCC.MK.2.4.3-(07).
+           \n- Bản dự thảo PYC."
+
+  utter_DVTH_guibanduthaoPYCphanmem:
+  - text: "ĐVYC, TTCNTT"
+
+  utter_TGTH_guibanduthaoPYCphanmem:
+  - text: "Theo thời gian phát sinh thực tế."
+
+  utter_implementation_tool_guibanduthaoPYCphanmem:
+  - text: "- Email
+           \n- Hội thảo
+           \n- ..."
+
+# I.2. Làm rõ PYC bài toán
+  utter_purpose_lamroPYCbaitoan:
+  - text: "Mục đích: BA chuyên trách họp làm rõ tính khả thi và thống nhất nội dung nâng cấp với ĐVYC."
+
+  utter_dkkichhoat_lamroPYCbaitoan:
+  - text: "Điều kiện kích hoạt:
+           \n- ĐVYC gửi bản dự thảo PYC qua email."
+
+  utter_thongtindauvao_lamroPYCbaitoan:
+  - text: "Thông tin đầu vào:
+           \n- PYC dự thảo.
+           \n- Quy trình/quy định có liên quan đến PYC (nếu có)."
+        
+  utter_lamroyeucau_lamroPYCbaitoan:
+  - text: "- BA chuyên trách hệ thống thuộc P. PTNV thực hiện thẩm định, trao đổi làm rõ yêu cầu bài toán với ĐVYC:
+           \n+) Nếu PYC không khả thi: PYC bài toán không đủ khả năng triển khai, đã có bài toán trùng, đã có chức năng/giải pháp thay thế tốt hơn, bài toán đưa ra không mang lại giá trị rõ ràng,..., P. PTNV từ chối và phản hồi với ĐVYC qua email có ghi rõ lý do trong vòng 2 ngày làm việc.
+           \n+) Nếu PYC khả thi: P. PTNV thực hiện làm rõ yêu cầu bài toán với ĐVYC thông qua hội thảo/email/điện thoại/..."
+
+  utter_thoigianlamro_lamroPYCbaitoan:
+  - text: "- ĐVYC tham gia làm rõ bài toán trong vòng 5 ngày làm việc kể từ ngày TTCNTT gửi thông báo/email mời họp (trường hợp xây dựng hệ thống mới hoặc phạm vi bài toán lớn/phức tạp thì thời gian có thể dài hơn tùy theo thực tế). Quá thời gian này, TTCNTT có quyền từ chối thực hiện yêu cầu.
+           \n- PYC liên quan đến lĩnh vực ngành dọc của các đơn vị khác (tài chính, pháp chế, quản lý tài sản,…): BA TTCNTT và ĐVYC cần mời đầu mối của đơn vị ngành dọc và đơn vị chủ trì nghiệp vụ hệ thống tham gia làm rõ yêu cầu bài toán. Trường hợp các đơn vị chưa thống nhất về luồng nghiệp vụ, TTCNTT được quyền pending hoặc không thực hiện PYC."
+
+  utter_content_lamroPYCbaitoan:
+  - text: "Nội dung của việc àm rõ PYC bài toán gồm:
+           \n- Ai sẽ làm rõ yêu cầu bài toán
+           \n- ĐVYC làm rõ bài toán trong bao lâu?
+           \nBạn muốn hỏi nội dung của phần nào?"
+
+  utter_output_lamroPYCbaitoan:
+  - text: "Biên bản họp và/hoặc tài liệu có liên quan."
+
+  utter_DVTH_lamroPYCbaitoan:
+  - text: "P. PTNV, ĐVYC, đơn vị ngành dọc (nếu có liên quan)"
+
+  utter_TGTH_lamroPYCbaitoan:
+  - text: "- 2 ngày làm việc: Đánh giá, từ chối PYC không khả thi.
+           \n- 5 ngày làm việc: Thời gian ĐVYC làm rõ PYC bài toán với TTCNTT."
+
+  utter_implementation_tool_lamroPYCbaitoan:
+  - text: "- Email
+           \n- Hội thảo
+           \n- ..."
+
+# I.3. Hoàn thiện nội dung PYC, trình ký lãnh đạo các đơn vị 
+  utter_purpose_hoanthiennoidungPYC:
+  - text: "Mục đích: ĐVYC viết lại PYC theo các nội dung đã thống nhất với BA để trình ký PYC làm cơ sở phát triển phần mềm."
+
+  utter_dkkichhoat_hoanthiennoidungPYC:
+  - text: "Điều kiện kích hoạt:
+           \n- ĐVYC và BA chuyên trách thống nhất được các nội dung nâng cấp"
+
+  utter_thongtindauvao_hoanthiennoidungPYC:
+  - text: "Thông tin đầu vào:
+           \n- PYC dự thảo.
+           \n- Quy trình/quy định có liên quan đến PYC (nếu có).
+           \n- Biên bản họp và/hoặc tài liệu có liên quan."
+
+  utter_content_hoanthiennoidungPYC:
+  - text: "- Dựa trên nội dung đã thống nhất với BA chuyên trách, ĐVYC cập nhật lại PYC và trình ký lãnh đạo các đơn vị có liên quan (ĐVYC, đơn vị chủ trì nghiệp vụ, đơn vị nghiệp vụ ngành dọc, TTCNTT).
+           \n- Trong trường hợp xây dựng hệ thống mới hoặc phạm vi bài toán lớn/phức tạp, ĐVYC phối hợp với TTCNTT ký kế hoạch lộ trình xây dựng phần mềm tổng thể. Sau đó, ĐVYC thực hiện ký các PYC phát triển phần mềm tương ứng với từng giai đoạn"
+
+  utter_output_hoanthiennoidungPYC:
+  - text: "Bản ký PYC."
+
+  utter_DVTH_hoanthiennoidungPYC:
+  - text: "Đơn vị yêu cầu"
+
+  utter_TGTH_hoanthiennoidungPYC:
+  - text: "Theo thời gian thực tế."
+
+  utter_implementation_tool_hoanthiennoidungPYC:
+  - text: "Voffice"
+
+# I.4. Gửi PYC bản ký vào email tiếp nhận chung của TTCNTT
+  utter_purpose_guiPYCvaoEmail:
+  - text: "Mục đích: Đầu mối điều phối của TTCNTT tiếp nhận yêu cầu phần mềm từ 1 nguồn chính thống, tránh bỏ sót."
+
+  utter_dkkichhoat_guiPYCvaoEmail:
+  - text: "Điều kiện kích hoạt:
+           \n- Lãnh đạo các đơn vị ký duyệt PYC phần mềm"
+
+  utter_thongtindauvao_guiPYCvaoEmail:
+  - text: "Thông tin đầu vào:
+           \n- PYC bản ký.
+           \n- Quy trình/quy định có liên quan đến PYC (nếu có)."
+
+  utter_content_guiPYCvaoEmail:
+  - text: "ĐVYC gửi bản ký PYC vào email tiếp nhận chung của TTCNTT: ycpm_vcc@viettel.com.vn (đây là nguồn tiếp nhận chính thống duy nhất, PYC không gửi qua nguồn này sẽ không được lên kế hoạch thực hiện)."
+
+  utter_output_guiPYCvaoEmail:
+  - text: "Email phản hồi đã tiếp nhận yêu cầu của TTCNTT."
+
+  utter_DVTH_guiPYCvaoEmail:
+  - text: "Đơn vị yêu cầu"
+
+  utter_TGTH_guiPYCvaoEmail:
+  - text: "Theo thời gian thực tế."
+
+  utter_implementation_tool_guiPYCvaoEmail:
+  - text: "Email"
+
+# I.5. Phân bổ PYC cho BA chuyên trách
+  utter_purpose_phanboPYCchoBA:
+  - text: "Mục đích: Đầu mối điều phối của TTCNTT điều phối PYC cho BA, khởi tạo công việc phát triển phần mềm trên Jira"
+
+  utter_dkkichhoat_phanboPYCchoBA:
+  - text: "Điều kiện kích hoạt:
+           \n- Yêu cầu phần mềm phát sinh từ các nguồn trong Tổng Công ty."
+
+  utter_thongtindauvao_phanboPYCchoBA:
+  - text: "Thông tin đầu vào:
+           \n- PYC dự thảo từ các đơn vị VCC."
+
+  utter_content_phanboPYCchoBA:
+  - text: "Đầu mối QA điều phối phụ trách email tiếp nhận chung của TTCNTT tạo Epic trên hệ thống cần nâng cấp đã được khai báo trên Jira (đính kèm bản ký PYC), đồng thời gửi thông báo cho BA chuyên trách thực hiện bước tiếp theo qua email tiếp nhận chung."
+
+  utter_output_phanboPYCchoBA:
+  - text: "Epic trên Jira được tạo cho hệ thống cần nâng cấp."
+
+  utter_DVTH_phanboPYCchoBA:
+  - text: "TTCNTT"
+
+  utter_TGTH_phanboPYCchoBA:
+  - text: "Sau khi nhận được PYC bản ký gửi qua email chung"
+
+  utter_implementation_tool_phanboPYCchoBA:
+  - text: "- Voffice
+           \n- Email"
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

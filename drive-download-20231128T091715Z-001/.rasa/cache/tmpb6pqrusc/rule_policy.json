@@ -1,0 +1,56 @@
+{
+  "lookup": {
+    "rules": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"information_log_in\"}}]": "utter_information_log_in",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"information_log_in\"}}, {\"prev_action\": {\"action_name\": \"utter_information_log_in\"}, \"user\": {\"intent\": \"information_log_in\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"information_banking_transfer\"}}]": "utter_information_banking_transfer",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"information_banking_transfer\"}}, {\"prev_action\": {\"action_name\": \"utter_information_banking_transfer\"}, \"user\": {\"intent\": \"information_banking_transfer\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_service_name\"}}]": "action_list_service_name",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"ask_service_name\"}}, {\"prev_action\": {\"action_name\": \"action_list_service_name\"}, \"user\": {\"intent\": \"ask_service_name\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"information_banking_check_money\"}}]": "utter_information_banking_check_money",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"information_banking_check_money\"}}, {\"prev_action\": {\"action_name\": \"utter_information_banking_check_money\"}, \"user\": {\"intent\": \"information_banking_check_money\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}]": "utter_goodbye",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"goodbye\"}}, {\"prev_action\": {\"action_name\": \"utter_goodbye\"}, \"user\": {\"intent\": \"goodbye\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cust_sign_in\"}}]": "form_cust_sign_in",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"cust_sign_in\"}}, {\"active_loop\": {\"name\": \"form_cust_sign_in\"}, \"prev_action\": {\"action_name\": \"form_cust_sign_in\"}, \"user\": {\"intent\": \"cust_sign_in\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nlu_fallback\"}}]": "utter_unclear",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nlu_fallback\"}}, {\"prev_action\": {\"action_name\": \"utter_unclear\"}, \"user\": {\"intent\": \"nlu_fallback\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"information_banking_create_account\"}}]": "utter_information_banking_create_account",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"information_banking_create_account\"}}, {\"prev_action\": {\"action_name\": \"utter_information_banking_create_account\"}, \"user\": {\"intent\": \"information_banking_create_account\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"create_account\"}}]": "form_register_an_account",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"create_account\"}}, {\"active_loop\": {\"name\": \"form_register_an_account\"}, \"prev_action\": {\"action_name\": \"form_register_an_account\"}, \"user\": {\"intent\": \"create_account\"}}]": "action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"deny\"}}]": "utter_recommend",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"deny\"}}, {\"prev_action\": {\"action_name\": \"utter_recommend\"}, \"user\": {\"intent\": \"deny\"}}]": "action_listen"
+    },
+    "rule_only_slots": [],
+    "rule_only_loops": [
+      "form_cust_sign_in",
+      "form_register_an_account"
+    ],
+    "rules_for_loop_unhappy_path": {
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"form_cust_sign_in\"}, \"prev_action\": {\"action_name\": \"form_cust_sign_in\"}, \"user\": {\"intent\": \"cust_sign_in\"}}]": "do_not_predict_loop_action",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}}, {\"active_loop\": {\"name\": \"form_register_an_account\"}, \"prev_action\": {\"action_name\": \"form_register_an_account\"}, \"user\": {\"intent\": \"create_account\"}}]": "do_not_predict_loop_action"
+    },
+    "rules_not_in_stories": [
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"information_banking_check_money\"}}]",
+      "predicting default action with intent restart",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nlu_fallback\"}}]",
+      "handling active loops and forms - form_cust_sign_in - action_listen",
+      "handling active loops and forms - form_register_an_account",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"information_banking_create_account\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"information_banking_transfer\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"deny\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"information_log_in\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"information_banking_check_money\"}}, {\"prev_action\": {\"action_name\": \"utter_information_banking_check_money\"}, \"user\": {\"intent\": \"information_banking_check_money\"}}]",
+      "predicting default action with intent session_start",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"information_banking_create_account\"}}, {\"prev_action\": {\"action_name\": \"utter_information_banking_create_account\"}, \"user\": {\"intent\": \"information_banking_create_account\"}}]",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"information_banking_transfer\"}}, {\"prev_action\": {\"action_name\": \"utter_information_banking_transfer\"}, \"user\": {\"intent\": \"information_banking_transfer\"}}]",
+      "handling active loops and forms - form_cust_sign_in",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"deny\"}}, {\"prev_action\": {\"action_name\": \"utter_recommend\"}, \"user\": {\"intent\": \"deny\"}}]",
+      "predicting default action with intent back",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"nlu_fallback\"}}, {\"prev_action\": {\"action_name\": \"utter_unclear\"}, \"user\": {\"intent\": \"nlu_fallback\"}}]",
+      "handling active loops and forms - form_register_an_account - action_listen",
+      "[{\"prev_action\": {\"action_name\": \"action_listen\"}, \"user\": {\"intent\": \"information_log_in\"}}, {\"prev_action\": {\"action_name\": \"utter_information_log_in\"}, \"user\": {\"intent\": \"information_log_in\"}}]"
+    ]
+  }
+}

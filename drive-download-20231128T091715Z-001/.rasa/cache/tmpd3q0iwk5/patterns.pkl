@@ -1,0 +1,10 @@
+[
+  {
+    "name": "account_number",
+    "pattern": "\\d{8,12}"
+  },
+  {
+    "name": "password",
+    "pattern": "[a-zA-Z]{3}[0-9]{3}"
+  }
+]

@@ -1,0 +1,142 @@
+version: "3.1"
+
+intents:
+  - greet
+  - goodbye
+  - affirm
+  - deny
+  - thanks
+  - ask_service_name
+  - check_money
+  - bank_transfer
+  - interbank_transfer
+  - samebank_transfer
+  - information_banking_check_money
+  - information_log_in
+  - information_banking_transfer
+  - information_banking_create_account
+  - cust_sign_in
+  - so_tai_khoan
+  - mat_khau
+  - ho_va_ten
+  - create_account
+
+entities:
+  - cust_sex
+  - service_name
+  - account_number
+  - password
+  - name
+
+slots:
+   cust_sex:
+     type: text
+     mappings:
+     - type: from_entity
+       entity: cust_sex
+   service_name:
+     type: text
+     mappings:
+     - type: from_entity
+       entity: service_name
+   account_number:
+     type: text
+     mappings:
+     - type: from_entity
+       entity: account_number
+   password:
+     type: text
+     mappings:
+     - type: from_entity
+       entity: password
+   name:
+     type: text
+     mappings:
+       - type: from_entity
+         entity: name
+
+responses:
+  utter_greet:
+  - text: Xin chào quý khách 😃. Mình là Bot AI đến từ Ngân Hàng. Không biết mình có thể giúp gì cho quý khách ạ?
+    image: static/image_rasa/hello.jpg
+
+  utter_happy:
+  - text: Rất vui được phục vụ quý khách!
+
+  utter_goodbye:
+  - text: Tạm biệt quý khách.
+  - text: Xin chào và hẹn gặp lại quý khách lần sau.
+
+  utter_thanks:
+    - text: Hihi cảm ơn bạn đã khen ạ! Mình rất vui...
+    - text: Ngại quá, ngại quá hihi... Đó là trách nhiệm của mình mà
+
+  utter_information_banking_check_money:
+    - text: Số dư hay số dư tài khoản ngân hàng là số tiền còn thừa ra của bạn mà có trong tài khoản ngân hàng. Hiểu đơn giản là một tài khoản ngân hàng là bản ghi trong một hệ thống kế toán mà trong đó một khoản nợ kinh doanh có ghi nợ các khoản tín dụng để làm bằng chứng trong các giao dịch.
+      image: static/image_rasa/sodutaikhoan.jpg
+
+  utter_information_banking_transfer:
+    - text: Chuyển khoản ngân hàng là dịch vụ cho phép khách hàng chuyển tiền có trong tài khoản tại ngân hàng này sang tài khoản tại một ngân hàng khác (hoặc cùng ngân hàng) rất nhanh chóng và an toàn. Điều kiện cần để giao dịch được thực hiện thành công là người gửi và người nhận phải có tài khoản tại ngân hàng.
+      image: static/image_rasa/chuyentien.jpg
+
+  utter_information_log_in:
+    - text: Đăng nhập tài khoản ngân hàng là bước đầu tiên trong quy trình giao dịch của ngân hàng. Khi đăng nhập hay xác thực danh tính, bạn có thể sử dụng được nhiều dịch vụ khác tiếp theo.
+      image: static/image_rasa/dangnhap.png
+  utter_information_banking_create_account:
+    - text: Tài khoản (account) là bản ghi chép các giao dịch giữa hai bên giao dịch. Các bên giao dịch có thể là cá nhân, bộ phận doanh nghiệp hay một tổ chức nào đó. Ví dụ, tài khoản tiền gửi của một cá nhân ghi chép giao dịch giữa một cá nhân và ngân hàng.
+      image: static/image_rasa/dangki.jpg
+
+  utter_ask_account_number:
+    - text: Số tài khoản của bạn là gì?
+  utter_ask_password:
+    - text: Mật khẩu của bạn là gì?
+  utter_ask_name:
+    - text: Họ và tên của bạn là gì?
+
+  utter_recommend:
+    - text: Quý khách hãy sử dụng tính năng khác của mình nhaaa
+
+  utter_update_message:
+    - text: Tính năng này đang được cập nhật. Bot sẽ báo bạn khi đã sẵn sàng!
+
+  utter_unclear:
+  - text: Hệ thống đang chưa hiểu ý của quý khách. Xin quý khách vui lòng nhập lại...
+
+actions:
+  - utter_greet
+  - utter_happy
+  - utter_goodbye
+  - utter_thanks
+  - utter_information_banking_check_money
+  - utter_information_banking_transfer
+  - utter_information_log_in
+  - utter_information_banking_create_account
+  - utter_unclear
+  - utter_ask_account_number
+  - utter_ask_password
+  - utter_ask_name
+  - utter_recommend
+  - utter_update_message
+  - action_check_account_in_database
+  - action_create_account_in_database
+  - action_list_service_name
+  - action_account_login_message
+  - action_bank_transfer_message
+  - action_reset_account
+
+
+forms:
+  form_cust_sign_in:
+    required_slots:
+      - account_number
+      - password
+  form_register_an_account:
+    required_slots:
+      - account_number
+      - password
+      - name
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

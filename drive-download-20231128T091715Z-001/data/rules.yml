@@ -1,0 +1,65 @@
+version: "3.1"
+
+rules:
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: goodbye
+  - action: utter_goodbye
+
+- rule: Say goodbye anytime the user says goodbye
+  steps:
+  - intent: nlu_fallback
+  - action: utter_unclear
+
+- rule: deny - recommend
+  steps:
+  - intent: deny
+  - action: utter_recommend
+
+- rule: tim hieu so dư tai khoan
+  steps:
+  - intent: information_banking_check_money
+  - action: utter_information_banking_check_money
+
+- rule: tim hieu chuyen tien
+  steps:
+  - intent: information_banking_transfer
+  - action: utter_information_banking_transfer
+
+- rule: tim hieu dang nhap
+  steps:
+  - intent: information_log_in
+  - action: utter_information_log_in
+
+- rule: tim hieu dang ki
+  steps:
+  - intent: information_banking_create_account
+  - action: utter_information_banking_create_account
+
+- rule: hoi chuc nang
+  steps:
+  - intent: ask_service_name
+  - action: action_list_service_name
+
+- rule: form sign in
+  steps:
+  - intent: cust_sign_in
+  - action: form_cust_sign_in
+  - active_loop: form_cust_sign_in
+
+- rule: form create account
+  steps:
+  - intent: create_account
+  - action: form_register_an_account
+  - active_loop: form_register_an_account
+
+#- rule: Submit form
+#  condition:
+#  - active_loop: form_cust_sign_in
+#  steps:
+#  - action: form_cust_sign_in
+#  - active_loop: null
+#  - slot_was_set:
+#    - requested_slot: null
+#  - action: action_check_account_in_database

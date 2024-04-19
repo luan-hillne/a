@@ -1,0 +1,22 @@
+version: '2'
+services:
+  rasa-flask:
+    image: rasa-chatbot:latest
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: rasa-chat-app
+    volumes: 
+      - .:/rasa_app
+    ports:
+      - 5000:5000
+    command: python3 app.py
+  rasa-server:
+    image: rasa/rasa:2.1.2-full
+    container_name: rasa-chatbot-server
+    volumes: 
+      - .:/app
+    ports:
+      - 5005:5005
+    command: run -m models --enable-api --cors "*"
+    

@@ -1,0 +1,358 @@
+version: "3.1"
+
+stories:
+
+- story: happy path
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_great
+  - action: utter_happy
+
+- story: sad path 1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: affirm
+  - action: utter_happy
+
+- story: sad path 2
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: mood_unhappy
+  - action: utter_cheer_up
+  - action: utter_did_that_help
+  - intent: deny
+  - action: utter_goodbye
+
+# hỏi về dịch vụ
+- story: story_0
+  steps:
+  - intent: ask_service_name
+  - action: utter_ask_service_name
+
+# hỏi về quy trình
+- story: story_1
+  steps:
+  - intent: ask_quytrinh
+  - action: utter_ask_quytrinh
+
+# hỏi về bước I.Tiếp nhận yêu cầu phần mềm
+- story: story_2
+  steps:
+  - intent: ask_tiepnhanyeucauphanmem
+  - action: utter_ask_tiepnhanyeucauphanmem
+
+#----------------------------------------- I.1. Gửi bản dự thảo PYC phần mềm
+# mục đích gửi bản dự thảo PYC phần mềm
+- story: story_3
+  steps:
+  - intent: purpose_guibanduthaoPYCphanmem
+  - action: utter_purpose_guibanduthaoPYCphanmem
+
+# Điều kiện kích hoạt gửi bản dự thảo PYC phần mềm
+- story: story_4
+  steps: 
+  - intent: dkkichhoat_guibanduthaoPYCphanmem
+  - action: utter_dkkichhoat_guibanduthaoPYCphanmem
+
+# Thông tin đầu vào của gửi bản dự thảo PYC phần mềm
+- story: story_5
+  steps:
+  - intent: thongtindauvao_guibanduthaoPYCphanmem
+  - action: utter_thongtindauvao_guibanduthaoPYCphanmem
+
+# PYC phần mềm xuất phát từ đâu?
+- story: story_6
+  steps:
+  - intent: where_does_PYC_come_from?
+  - action: utter_where_does_PYC_come_from?
+
+# PYC cần đảm bảo những gì?
+- story: story_7
+  steps:
+  - intent: what_does_PYC's_need_to_ensure?
+  - action: utter_what_does_PYC's_need_to_ensure?
+
+# Đánh giá các phiếu yêu cầu cần ưu tiên
+- story: story_8
+  steps:
+  - intent: evaluate_PYC
+  - action: utter_evaluate_PYC
+
+# PYC nóng là gì
+- story: story_9
+  steps:
+  - intent: ask_PYCnong
+  - action: utter_ask_PYCnong
+
+# Đầu vào của việc gửi bản dự thảo PYC phần mềm
+- story: story_10
+  steps:
+  - intent: input_guibanduthaoPYCphanmem
+  - action: utter_dkkichhoat_guibanduthaoPYCphanmem
+  - action: utter_thongtindauvao_guibanduthaoPYCphanmem
+
+# Nội dung của việc gửi bản dự thảo PYC phần mềm
+- story: story_11
+  steps:
+  - intent: content_guibanduthaoPYCphanmem
+  - action: utter_content_guibanduthaoPYCphanmem
+
+# Đầu ra của việc gửi bản dự thảo PYC phần mềm
+- story: story_12
+  steps:
+  - intent: output_guibanduthaoPYCphanmem
+  - action: utter_output_guibanduthaoPYCphanmem
+
+# ĐVTH của việc gửi bản dự thảo PYC phần mềm
+- story: story_13
+  steps:
+  - intent: DVTH_guibanduthaoPYCphanmem
+  - action: utter_DVTH_guibanduthaoPYCphanmem
+
+# Công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+- story: story_14
+  steps:
+  - intent: implementation_tool_guibanduthaoPYCphanmem
+  - action: utter_implementation_tool_guibanduthaoPYCphanmem
+
+#--------------------------------- I.2. Làm rõ PYC bài toán
+# Mục đich của việc làm rõ PYC bài toán
+- story: story_15
+  steps:
+  - intent: purpose_lamroPYCbaitoan
+  - action: utter_purpose_lamroPYCbaitoan
+
+# Điều kiện kích hoạt làm rõ PYC bài toán
+- story: story_16
+  steps:
+  - intent: dkkichhoat_lamroPYCbaitoan
+  - action: utter_dkkichhoat_lamroPYCbaitoan
+
+# Thông tin đầu vào của việc làm rõ PYC bài toán
+- story: story_17
+  steps:
+  - intent: thongtindauvao_lamroPYCbaitoan
+  - action: utter_thongtindauvao_lamroPYCbaitoan
+
+# Ai sẽ làm rõ yêu cầu bài toán với ĐVYC?
+- story: story_18
+  steps:
+  - intent: lamroyeucau_lamroPYCbaitoan
+  - action: utter_lamroyeucau_lamroPYCbaitoan
+
+# Bài toán yêu cầu được làm rõ trong bao lâu?
+- story: story_19
+  steps:
+  - intent: thoigianlamro_lamroPYCbaitoan
+  - action: utter_thoigianlamro_lamroPYCbaitoan
+
+# Đầu vào của làm rõ PYC bài toán?
+- story: story_20
+  steps:
+  - intent: input_lamroPYCbaitoan
+  - action: utter_dkkichhoat_lamroPYCbaitoan
+  - action: utter_thongtindauvao_lamroPYCbaitoan
+
+# Nội dung của làm rõ PYC bài toán?
+- story: story_21
+  steps:
+  - intent: content_lamroPYCbaitoan
+  - action: utter_content_lamroPYCbaitoan
+
+# Đầu ra của làm rõ PYC bài toán?
+- story: story_22
+  steps:
+  - intent: output_lamroPYCbaitoan
+  - action: utter_output_lamroPYCbaitoan
+
+# Đơn vị thực hiện của làm rõ PYC bài toán?
+- story: story_23
+  steps:
+  - intent: DVTH_lamroPYCbaitoan
+  - action: utter_DVTH_lamroPYCbaitoan
+
+# Thời gian thực hiện của làm rõ PYC bài toán?
+- story: story_24
+  steps:
+  - intent: TGTH_lamroPYCbaitoan
+  - action: utter_TGTH_lamroPYCbaitoan
+
+# Công cụ thực hiện của làm rõ PYC bài toán?
+- story: story_25
+  steps:
+  - intent: implementation_tool_lamroPYCbaitoan
+  - action: utter_implementation_tool_lamroPYCbaitoan
+
+#------------------------- I.3. Hoàn thiện nội dung PYC, trình ký lãnh đạo các đơn vị 
+# Mục đich của việc hoàn thiện nội dung PYC
+- story: story_26
+  steps:
+  - intent: purpose_hoanthiennoidungPYC
+  - action: utter_purpose_hoanthiennoidungPYC
+
+# Điều kiện kích hoạt hoàn thiện nội dung PYC
+- story: story_27
+  steps:
+  - intent: dkkichhoat_hoanthiennoidungPYC
+  - action: utter_dkkichhoat_hoanthiennoidungPYC
+
+# Thông tin đầu vào của việc hoàn thiện nội dung PYC
+- story: story_28
+  steps:
+  - intent: thongtindauvao_hoanthiennoidungPYC
+  - action: utter_thongtindauvao_hoanthiennoidungPYC
+
+# Đầu vào của hoàn thiện nội dung PYC?
+- story: story_29
+  steps:
+  - intent: input_hoanthiennoidungPYC
+  - action: utter_dkkichhoat_hoanthiennoidungPYC
+  - action: utter_thongtindauvao_hoanthiennoidungPYC
+
+# Nội dung của hoàn thiện nội dung PYC?
+- story: story_30
+  steps:
+  - intent: content_hoanthiennoidungPYC
+  - action: utter_content_hoanthiennoidungPYC
+
+# Đầu ra của hoàn thiện nội dung PYC?
+- story: story_31
+  steps:
+  - intent: output_hoanthiennoidungPYC
+  - action: utter_output_hoanthiennoidungPYC
+
+# Đơn vị thực hiện của hoàn thiện nội dung PYC?
+- story: story_32
+  steps:
+  - intent: DVTH_hoanthiennoidungPYC
+  - action: utter_DVTH_hoanthiennoidungPYC
+
+# Thời gian thực hiện của hoàn thiện nội dung PYC?
+- story: story_33
+  steps:
+  - intent: TGTH_hoanthiennoidungPYC
+  - action: utter_TGTH_hoanthiennoidungPYC
+
+# Công cụ thực hiện của hoàn thiện nội dung PYC?
+- story: story_34
+  steps:
+  - intent: implementation_tool_hoanthiennoidungPYC
+  - action: utter_implementation_tool_hoanthiennoidungPYC
+
+#----------------------------- I.4. Gửi PYC bản ký vào email tiếp nhận chung của TTCNTT
+# Mục đich của việc gửi PYC bản ký vào email
+- story: story_35
+  steps:
+  - intent: purpose_guiPYCvaoEmail
+  - action: utter_purpose_guiPYCvaoEmail
+
+# Điều kiện kích hoạt gửi PYC bản ký vào email
+- story: story_36
+  steps:
+  - intent: dkkichhoat_guiPYCvaoEmail
+  - action: utter_dkkichhoat_guiPYCvaoEmail
+
+# Thông tin đầu vào của việc gửi PYC bản ký vào email
+- story: story_37
+  steps:
+  - intent: thongtindauvao_guiPYCvaoEmail
+  - action: utter_thongtindauvao_guiPYCvaoEmail
+
+# Đầu vào của gửi PYC bản ký vào email?
+- story: story_38
+  steps:
+  - intent: input_guiPYCvaoEmail
+  - action: utter_dkkichhoat_guiPYCvaoEmail
+  - action: utter_thongtindauvao_guiPYCvaoEmail
+
+# Nội dung của gửi PYC bản ký vào email?
+- story: story_39
+  steps:
+  - intent: content_guiPYCvaoEmail
+  - action: utter_content_guiPYCvaoEmail
+
+# Đầu ra của gửi PYC bản ký vào email?
+- story: story_40
+  steps:
+  - intent: output_guiPYCvaoEmail
+  - action: utter_output_guiPYCvaoEmail
+
+# Đơn vị thực hiện của gửi PYC bản ký vào email?
+- story: story_41
+  steps:
+  - intent: DVTH_guiPYCvaoEmail
+  - action: utter_DVTH_guiPYCvaoEmail
+
+# Thời gian thực hiện của gửi PYC bản ký vào email?
+- story: story_42
+  steps:
+  - intent: TGTH_guiPYCvaoEmail
+  - action: utter_TGTH_guiPYCvaoEmail
+
+# Công cụ thực hiện của gửi PYC bản ký vào email?
+- story: story_43
+  steps:
+  - intent: implementation_tool_guiPYCvaoEmail
+  - action: utter_implementation_tool_guiPYCvaoEmail
+
+#------------------------------ I.5. Phân bổ PYC cho BA chuyên trách
+# Mục đich của việc phân bổ PYC cho BA chuyên trách
+- story: story_44
+  steps:
+  - intent: purpose_phanboPYCchoBA
+  - action: utter_purpose_phanboPYCchoBA
+
+# Điều kiện kích hoạt phân bổ PYC cho BA chuyên trách
+- story: story_45
+  steps:
+  - intent: dkkichhoat_phanboPYCchoBA
+  - action: utter_dkkichhoat_phanboPYCchoBA
+
+# Thông tin đầu vào của việc phân bổ PYC cho BA chuyên trách
+- story: story_46
+  steps:
+  - intent: thongtindauvao_phanboPYCchoBA
+  - action: utter_thongtindauvao_phanboPYCchoBA
+
+# Đầu vào của phân bổ PYC cho BA chuyên trách?
+- story: story_47
+  steps:
+  - intent: input_phanboPYCchoBA
+  - action: utter_dkkichhoat_phanboPYCchoBA
+  - action: utter_thongtindauvao_phanboPYCchoBA
+
+# Nội dung của phân bổ PYC cho BA chuyên trách?
+- story: story_48
+  steps:
+  - intent: content_phanboPYCchoBA
+  - action: utter_content_phanboPYCchoBA
+
+# Đầu ra của phân bổ PYC cho BA chuyên trách?
+- story: story_49
+  steps:
+  - intent: output_phanboPYCchoBA
+  - action: utter_output_phanboPYCchoBA
+
+# Đơn vị thực hiện của phân bổ PYC cho BA chuyên trách?
+- story: story_50
+  steps:
+  - intent: DVTH_phanboPYCchoBA
+  - action: utter_DVTH_phanboPYCchoBA
+
+# Thời gian thực hiện của phân bổ PYC cho BA chuyên trách?
+- story: story_51
+  steps:
+  - intent: TGTH_phanboPYCchoBA
+  - action: utter_TGTH_phanboPYCchoBA
+
+# Công cụ thực hiện của phân bổ PYC cho BA chuyên trách?
+- story: story_52
+  steps:
+  - intent: implementation_tool_phanboPYCchoBA
+  - action: utter_implementation_tool_phanboPYCchoBA

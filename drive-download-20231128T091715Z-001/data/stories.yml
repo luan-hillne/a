@@ -1,0 +1,128 @@
+version: "3.1"
+
+stories:
+
+- story: story_1
+  steps:
+  - intent: greet
+  - action: utter_greet
+  - intent: ask_service_name
+  - action: action_list_service_name
+
+
+- story: story_2
+  steps:
+  - action: utter_greet
+  - intent: goodbye
+  - action: utter_goodbye
+
+
+- story: story_3
+  steps:
+  - action: utter_greet
+  - intent: thanks
+  - action: utter_thanks
+  - intent: goodbye
+  - action: utter_goodbye
+
+# Chức năng đăng nhập
+- story: cust login true
+  steps:
+  - intent: cust_sign_in
+  - action: form_cust_sign_in
+  - active_loop: form_cust_sign_in
+  - slot_was_set:
+    - requested_slot: account_number
+  - slot_was_set:
+    - account_number: 12445689
+  - slot_was_set:
+    - requested_slot: password
+  - slot_was_set:
+    - password: abc111
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_check_account_in_database
+
+# Xem số dư tài khoản và đăng nhập
+- story: story_4
+  steps:
+  - intent: ask_service_name
+  - action: action_list_service_name
+  - intent: check_money
+  - action: action_account_login_message
+  - intent: affirm
+  - action: form_cust_sign_in
+  - active_loop: form_cust_sign_in
+  - slot_was_set:
+    - requested_slot: account_number
+  - slot_was_set:
+    - account_number: 12445689
+  - slot_was_set:
+    - requested_slot: password
+  - slot_was_set:
+    - password: abc111
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_check_account_in_database
+
+
+# Chức năng chuyển tiền cùng ngân hàng
+- story: story_7
+  steps:
+  - intent: ask_service_name
+  - action: action_list_service_name
+  - intent: bank_transfer
+  - action: action_bank_transfer_message
+  - intent: samebank_transfer
+  - action: utter_update_message
+  - action: utter_recommend
+
+# Chức năng chuyển tiền cùng ngân hàng
+- story: story_8
+  steps:
+  - intent: samebank_transfer
+  - action: utter_update_message
+  - action: utter_recommend
+
+# Chức năng chuyển tiền liên ngân hàng
+- story: story_8
+  steps:
+  - intent: ask_service_name
+  - action: action_list_service_name
+  - intent: bank_transfer
+  - action: action_bank_transfer_message
+  - intent: interbank_transfer
+  - action: utter_update_message
+  - action: utter_recommend
+
+# Chức năng chuyển tiền liên ngân hàng
+- story: story_9
+  steps:
+  - intent: interbank_transfer
+  - action: utter_update_message
+  - action: utter_recommend
+
+# Chức năng đăng ký
+- story: create_account
+  steps:
+  - intent: create_account
+  - action: form_register_an_account
+  - active_loop: form_register_an_account
+  - slot_was_set:
+    - requested_slot: account_number
+  - slot_was_set:
+    - account_number: 12445689
+  - slot_was_set:
+    - requested_slot: password
+  - slot_was_set:
+    - password: abc111
+  - slot_was_set:
+    - requested_slot: name
+  - slot_was_set:
+    - name: Lệnh Hồ Xung
+  - slot_was_set:
+    - requested_slot: null
+  - active_loop: null
+  - action: action_create_account_in_database

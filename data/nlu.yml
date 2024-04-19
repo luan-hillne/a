@@ -1,0 +1,1389 @@
+version: "3.1"
+
+nlu:
+- intent: greet
+  examples: |
+    - hey
+    - hello
+    - hi
+    - hello there
+    - good morning
+    - good evening
+    - moin
+    - hey there
+    - let's go
+    - hey dude
+    - goodmorning
+    - goodevening
+    - good afternoon
+    - Xin chào
+    - Bạn ơi cho mình hỏi
+    - em ơi, cho anh hỏi
+    - em ơi, cho chị hỏi
+    - xin chào
+    - xin chào !
+    - xinn chào
+    - có ai ko
+    - có ai ở đây không
+    - is there anyone
+    - anyone here
+    - chào
+    - có ai không
+    - alo
+    - cốc cốc
+    - chào em
+    - cứu với
+    - giúp tôi
+    - giúp với
+    - cứu
+    - xin chao
+    - 2
+
+- intent: goodbye
+  examples: |
+    - good afternoon
+    - cu
+    - good by
+    - cee you later
+    - good night
+    - bye
+    - goodbye
+    - have a nice day
+    - see you around
+    - bye bye
+    - see you later
+    - chào nhé
+    - tạm biệt
+    - chào tạm biệt
+    - bai bai
+    - bai
+    - bái bai
+    - bb
+    - nói chuyện sau nhé
+    - tạm bịt
+    - bai bot
+    - gút bai
+    - good bye
+    - baibai
+    - pp
+
+- intent: give_name
+  examples: |
+    - [Anh](cust_sex) là [Thắng](cust_name)
+
+- intent: affirm
+  examples: |
+    - chốt
+    - đồng ý
+    - ok
+    - yes
+    - y
+    - indeed
+    - of course
+    - that sounds good
+    - correct
+    - đúng rồi
+    - được
+    - tôi chấp nhận
+    - oke
+    - ok luôn
+    - chuẩn luôn
+    - quá chuẩn
+    - tuyệt vời
+    - rất tốt
+    - tuyệt
+    - đáng kinh ngạc
+    - hoàn hảo
+    - tôi cảm thấy rất tuyệt
+    - tôi rất khỏe
+    - tôi rất tốt
+    - có
+    - ừ
+    - okie
+    - oki
+    - uk
+    - uki
+    - ukie
+    - uh
+    - uhm
+    - yeah
+    - đc
+    - cũng được
+    - ừm
+    - ừm oke
+    - nhất trí
+    - quyết định vậy nhé
+
+- intent: deny
+  examples: |
+    - no
+    - never
+    - I don't think so
+    - don't like that
+    - no way
+    - not really
+    - khong
+    - không đâu
+    - đéo
+    - không đồng ý
+    - không thích
+    - ko
+    - cc
+    - không nhé
+    - không bao giờ
+    - tôi không nghĩ vậy
+    - không đời nào
+    - hoàn toàn không
+    - không
+
+- intent: thanks
+  examples: |
+    - cảm ơn em nhá
+    - thanks em nha
+    - cảm ơn nha
+    - good job
+    - thank you
+    - cảm ơn bot nha
+    - thanks bot
+    - cảm ơn
+    - thank you so much
+    - great! Thanks
+    - Cảm ơn em
+    - tốt quá
+    - ngân hàng làm rất tốt
+    - tốt thật
+    - tuyệt vời
+    - rất nhanh
+    - giỏi quá
+    - bot thông minh đấy
+    - hay phết nhỉ
+    - tốt đấy
+    - tôi rất hài lòng
+    - chatbot mạnh dữ
+    - thông minh quá ta
+    - giỏi
+    - hay
+    - ổn phết
+    - xong rồi cảm ơn
+
+- intent: ask_service_name
+  examples: |
+    - có những dịch vụ gì nhỉ
+    - [Chị](cust_sex) muốn xem danh sách dịch vụ
+    - [Anh](cust_sex) muốn xem danh sách dịch vụ
+    - [Em](cust_sex) muốn xem danh sách dịch vụ
+    - mình muốn xem danh sách dịch vụ
+    - tôi muốn xem danh sách dịch vụ
+    - [chú](cust_sex) muốn xem danh sách dịch vụ
+    - [bác](cust_sex) muốn xem danh sách dịch vụ
+    - [cô](cust_sex) muốn xem danh sách dịch vụ
+    - cho [Chị](cust_sex) xem danh sách dịch vụ
+    - cho [Anh](cust_sex) xem danh sách dịch vụ
+    - cho [Em](cust_sex) xem danh sách dịch vụ
+    - cho [chú](cust_sex) xem danh sách dịch vụ
+    - cho [bác](cust_sex) xem danh sách dịch vụ
+    - cho [cô](cust_sex) xem danh sách dịch vụ
+    - có những dịch vụ gì
+    - cho tôi xem dịch vụ
+    - hỏi dịch vụ
+    - co dich vu nao
+    - Bên em có những dịch vụ gì
+    - dich vu
+    - hoi dich vu
+    - tôi muốn hỏi dịch vụ
+    - xem dịch vụ
+    - bạn có thể làm gì nào
+    - em có thể giúp gì cho tôi
+    - bạn biết làm gì
+    - mày được việc không
+    - [chị](cust_sex) muốn xem dịch vụ bên em
+    - có mấy dịch vụ nhỉ?
+    - bot có gì
+    - bot làm được gì
+    - bạn làm được gì
+    - bot biết gì
+    - giúp gì
+    - giúp được gì
+
+- intent: ask_manager
+  examples: |
+    - tổng giám đốc của VCC là ai?
+    - tổng giám đốc của vcc là ai?
+    - tổng giám đốc của VCC
+    - tổng giám đốc của vcc
+
+- intent: ask_quytrinh
+  examples: |
+    - quy trình phối hợp xây dựng phần mềm
+    - quy trình phối hợp nâng cấp phần mềm
+    - các bước của quy trình xây dựng phần mềm
+    - các bước của quy trình nâng cấp phần mềm
+    - lưu đồ xây dựng phần mềm
+    - lưu đồ nâng cấp phần mềm
+    - cho tôi biết về quy trình xây dựng phần mềm
+    - cho tôi biết về quy trình nâng cấp phần mềm
+    - [anh](cust_sex) muốn biết về quy trình xây dựng phần mềm
+    - [anh](cust_sex) muốn biết về quy trình nâng cấp phần mềm
+
+- intent: ask_tiepnhanyeucauphanmem
+  examples: |
+    - các bước tiếp nhận yêu cầu phần mềm
+    - bước I của quy trình gồm những gì
+    - bước I gồm những gì
+    - giải thích các bước tiếp nhận yêu cầu phần mềm
+    - giải thích bước I của quy trình
+    - cho tôi biết các bước tiếp nhận yêu cầu phần mềm
+    - [anh](cust_sex) muốn biết các bước tiếp nhận yêu cầu phần mềm
+    - [chị](cust_sex) muốn biết các bước tiếp nhận yêu cầu phần mềm
+    - [em](cust_sex) muốn biết các bước tiếp nhận yêu cầu phần mềm
+    - [mình](cust_sex) muốn biết các bước tiếp nhận yêu cầu phần mềm
+    - cho tôi biết bước I của quy trình gồm những gì
+    - [anh](cust_sex) muốn biết bước I của quy trình gồm những gì
+    - [chị](cust_sex) muốn biết bước I của quy trình gồm những gì
+    - [em](cust_sex) muốn biết bước I của quy trình gồm những gì
+    - [mình](cust_sex) muốn biết bước I của quy trình gồm những gì
+    - giải thích cho tôi bước I của quy trình
+    - giải thích cho [anh](cust_sex) bước I của quy trình
+    - giải thích cho [chị](cust_sex) bước I của quy trình
+    - giải thích cho [em](cust_sex) bước I của quy trình
+    - giải thích cho [mình](cust_sex) bước I của quy trình
+    - giải thích cho tôi các bước tiếp nhận yêu cầu phần mềm
+    - giải thích cho [anh](cust_sex) các bước tiếp nhận yêu cầu phần mềm
+    - giải thích cho [chị](cust_sex) các bước tiếp nhận yêu cầu phần mềm
+    - giải thích cho [em](cust_sex) các bước tiếp nhận yêu cầu phần mềm
+    - giải thích cho [mình](cust_sex) các bước tiếp nhận yêu cầu phần mềm
+
+# I.1. Gửi bản dự thảo PYC phần mềm
+- intent: purpose_guibanduthaoPYCphanmem
+  examples: |
+    - mục dích của việc gửi bản dự thảo PYC phần mềm
+    - mục dích của gửi bản dự thảo PYC phần mềm
+    - mục dích của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - mục dích của gửi bản dự thảo phần yêu cầu phần mềm
+    - cho tôi biết mục đích của việc gửi bản dự thảo PYC phần mềm
+    - cho [anh](cust_sex) biết mục đích của việc gửi bản dự thảo PYC phần mềm
+    - cho [chị](cust_sex) biết mục đích của việc gửi bản dự thảo PYC phần mềm
+    - cho [em](cust_sex) biết mục đích của việc gửi bản dự thảo PYC phần mềm
+    - cho [mình](cust_sex) biết mục đích của việc gửi bản dự thảo PYC phần mềm
+    - tôi muốn biết mục đích của việc gửi bản dự thảo PYC phần mềm
+    - [anh](cust_sex) muốn biết mục đích của việc gửi bản dự thảo PYC phần mềm
+    - [chị](cust_sex) muốn biết mục đích của việc gửi bản dự thảo PYC phần mềm
+    - [em](cust_sex) muốn biết mục đích của việc gửi bản dự thảo PYC phần mềm
+    - [mình](cust_sex) muốn biết mục đích của việc gửi bản dự thảo PYC phần mềm
+    - cho tôi biết mục đích của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - cho [anh](cust_sex) biết mục đích của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - cho [chị](cust_sex) biết mục đích của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - cho [em](cust_sex) biết mục đích của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - cho [mình](cust_sex) biết mục đích của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - tôi muốn biết mục đích của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - [anh](cust_sex) muốn biết mục đích của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - [chị](cust_sex) muốn biết mục đích của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - [em](cust_sex) muốn biết mục đích của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - [mình](cust_sex) muốn biết mục đích của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+
+- intent: dkkichhoat_guibanduthaoPYCphanmem
+  examples: |
+    - điều kiện kích hoạt của gửi bản dự thảo PYC phần mềm
+    - cho tôi biết điều kiện kích hoạt của gửi bản dự thảo PYC phần mềm
+    - cho [anh](cust_sex) biết điều kiện kích hoạt của gửi bản dự thảo PYC phần mềm
+    - cho [chị](cust_sex) biết điều kiện kích hoạt của gửi bản dự thảo PYC phần mềm
+    - cho [em](cust_sex) biết điều kiện kích hoạt của gửi bản dự thảo PYC phần mềm
+    - cho [mình](cust_sex) biết điều kiện kích hoạt của gửi bản dự thảo PYC phần mềm
+    - tôi muốn biết điều kiện kích hoạt của gửi bản dự thảo PYC phần mềm
+    - [anh](cust_sex) muốn biết điều kiện kích hoạt của gửi bản dự thảo PYC phần mềm
+    - [chị](cust_sex) muốn biết điều kiện kích hoạt của gửi bản dự thảo PYC phần mềm
+    - [em](cust_sex) muốn biết điều kiện kích hoạt của gửi bản dự thảo PYC phần mềm
+    - [mình](cust_sex) muốn biết điều kiện kích hoạt của gửi bản dự thảo PYC phần mềm
+    - điều kiện kích hoạt của gửi bản dự thảo phiếu yêu cầu phần mềm
+    - cho tôi biết điều kiện kích hoạt của gửi bản dự thảo phiếu yêu cầu phần mềm
+    - cho [anh](cust_sex) biết điều kiện kích hoạt của gửi bản dự thảo phiếu yêu cầu phần mềm
+    - cho [chị](cust_sex) biết điều kiện kích hoạt của gửi bản dự thảo phiếu yêu cầu phần mềm
+    - cho [em](cust_sex) biết điều kiện kích hoạt của gửi bản dự thảo phiếu yêu cầu phần mềm
+    - cho [mình](cust_sex) biết điều kiện kích hoạt của gửi bản dự thảo phiếu yêu cầu phần mềm
+    - tôi muốn biết điều kiện kích hoạt của gửi bản dự thảo phiếu yêu cầu phần mềm
+    - [anh](cust_sex) muốn biết điều kiện kích hoạt của gửi bản dự thảo phiếu yêu cầu phần mềm
+    - [chị](cust_sex) muốn biết điều kiện kích hoạt của gửi bản dự thảo phiếu yêu cầu phần mềm
+    - [em](cust_sex) muốn biết điều kiện kích hoạt của gửi bản dự thảo phiếu yêu cầu phần mềm
+    - [mình](cust_sex) muốn biết điều kiện kích hoạt của gửi bản dự thảo phiếu yêu cầu phần mềm
+
+- intent: thongtindauvao_guibanduthaoPYCphanmem
+  examples: |
+    - thông tin đầu vào của gửi bản dự thảo PYC phần mềm
+    - thông tin đầu vào của việc gửi bản dự thảo PYC phần mềm
+    - cho biết thông tin đầu vào của việc gửi bản dự thảo PYC phần mềm
+    - cho tôi biết thông tin đầu vào của việc gửi bản dự thảo PYC phần mềm
+    - cho [anh](cust_sex) biết thông tin đầu vào của việc gửi bản dự thảo PYC phần mềm
+    - cho [chị](cust_sex) biết thông tin đầu vào của việc gửi bản dự thảo PYC phần mềm
+    - cho [em](cust_sex) biết thông tin đầu vào của việc gửi bản dự thảo PYC phần mềm
+    - cho [mình](cust_sex) biết thông tin đầu vào của việc gửi bản dự thảo PYC phần mềm
+    - tôi muốn biết thông tin đầu vào của việc gửi bản dự thảo PYC phần mềm
+    - [anh](cust_sex) muốn biết thông tin đầu vào của việc gửi bản dự thảo PYC phần mềm
+    - [chị](cust_sex) muốn biết thông tin đầu vào của việc gửi bản dự thảo PYC phần mềm
+    - [em](cust_sex) muốn biết thông tin đầu vào của việc gửi bản dự thảo PYC phần mềm
+    - [mình](cust_sex) muốn biết thông tin đầu vào của việc gửi bản dự thảo PYC phần mềm
+    - thông tin đầu vào của gửi bản dự thảo phiếu yêu cầu phần mềm
+    - thông tin đầu vào của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - cho biết thông tin đầu vào của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - cho tôi biết thông tin đầu vào của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - cho [anh](cust_sex) biết thông tin đầu vào của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - cho [chị](cust_sex) biết thông tin đầu vào của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - cho [em](cust_sex) biết thông tin đầu vào của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - cho [mình](cust_sex) biết thông tin đầu vào của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - tôi muốn biết thông tin đầu vào của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - [anh](cust_sex) muốn biết thông tin đầu vào của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - [chị](cust_sex) muốn biết thông tin đầu vào của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - [em](cust_sex) muốn biết thông tin đầu vào của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - [mình](cust_sex) muốn biết thông tin đầu vào của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+
+- intent: where_does_PYC_come_from?
+  examples: |
+    - PYC phần mêm xuất phát từ đâu?
+    - vì sao có PYC phần mềm?
+    - phiếu yêu cầu phần mêm xuất phát từ đâu?
+    - vì sao có phiếu yêu cầu phần mềm?
+    - cho biết PYC phần mêm xuất phát từ đâu?
+    - cho biết phiếu yêu cầu phần mêm xuất phát từ đâu?
+    - cho tôi biết PYC phần mêm xuất phát từ đâu?
+    - cho [anh](cust_sex) biết PYC phần mêm xuất phát từ đâu?
+    - cho [chị](cust_sex) biết PYC phần mêm xuất phát từ đâu?
+    - cho [em](cust_sex) biết PYC phần mêm xuất phát từ đâu?
+    - cho [mình](cust_sex) biết PYC phần mêm xuất phát từ đâu?
+    - cho tôi biết vì sao có PYC phần mềm?
+    - cho [anh](cust_sex) biết vì sao có PYC phần mềm?
+    - cho [chị](cust_sex) biết vì sao có PYC phần mềm?
+    - cho [em](cust_sex) biết vì sao có PYC phần mềm?
+    - cho [mình](cust_sex) biết vì sao có PYC phần mềm?
+    - cho tôi biết phiếu yêu cầu phần mêm xuất phát từ đâu?
+    - cho [anh](cust_sex) biết phiếu yêu cầu phần mêm xuất phát từ đâu?
+    - cho [chị](cust_sex) biết phiếu yêu cầu phần mêm xuất phát từ đâu?
+    - cho [em](cust_sex) biết phiếu yêu cầu phần mêm xuất phát từ đâu?
+    - cho [mình](cust_sex) biết phiếu yêu cầu phần mêm xuất phát từ đâu?
+    - cho tôi biết vì sao có phiếu yêu cầu phần mềm?
+    - cho [anh](cust_sex) biết vì sao có phiếu yêu cầu phần mềm?
+    - cho [chị](cust_sex) biết vì sao có phiếu yêu cầu phần mềm?
+    - cho [em](cust_sex) biết vì sao có phiếu yêu cầu phần mềm?
+    - cho [mình](cust_sex) biết vì sao có phiếu yêu cầu phần mềm?
+
+- intent: what_does_PYC's_need_to_ensure?
+  examples: |
+    - PYC cần đảm bảo những gì?
+    - phiếu yêu cầu cần đảm bảo những gì?
+    - cho biết PYC cần đảm bảo những gì?
+    - cho biết phiếu yêu cầu cần đảm bảo những gì?
+    - cho tôi biết PYC cần đảm bảo những gì?
+    - cho [anh](cust_sex) biết PYC cần đảm bảo những gì?
+    - cho [chị](cust_sex) biết PYC cần đảm bảo những gì?
+    - cho [em](cust_sex) biết PYC cần đảm bảo những gì?
+    - cho [mình](cust_sex) biết PYC cần đảm bảo những gì?
+    - cho tôi biết phiếu yêu cầu cần đảm bảo những gì?
+    - cho [anh](cust_sex) biết phiếu yêu cầu cần đảm bảo những gì?
+    - cho [chị](cust_sex) biết phiếu yêu cầu cần đảm bảo những gì?
+    - cho [em](cust_sex) biết phiếu yêu cầu cần đảm bảo những gì?
+    - cho [mình](cust_sex) biết phiếu yêu cầu cần đảm bảo những gì?
+
+- intent: evaluate_PYC
+  examples: |
+    - đánh giá các PYC
+    - đánh giá các PYC tháng tiếp theo
+    - đánh giá các PYC như thế nào?
+    - đánh giá các PYC ntn?
+    - đánh giá PYC cho tháng tiếp theo
+    - làm cách nào để đánh giá PYC
+    - cho tôi biết đánh giá PYC như thế nào
+    - cho [anh](cust_sex) biết đánh giá PYC như thế nào
+    - cho [chị](cust_sex) biết đánh giá PYC như thế nào
+    - cho [em](cust_sex) biết đánh giá PYC như thế nào
+    - cho tôi biết việc đánh giá PYC tháng tiếp theo
+    - cho [anh](cust_sex) biết việc đánh giá PYC tháng tiếp theo
+    - cho [chị](cust_sex) biết đánh giá PYC tháng tiếp theo
+    - cho [em](cust_sex) biết đánh giá PYC tháng tiếp theo
+    - cho tôi biết việc đánh giá phiếu yêu cầu tháng tiếp theo ntn?
+
+- intent: ask_PYCnong
+  examples: |
+    - PYC nóng là gì?
+    - phiếu yêu cầu nóng là gì?
+    - cho biết PYC nóng là gì?
+    - PYC nóng
+    - phiếu yêu cầu nóng
+    - cho tôi biết PYC nóng là gì?
+    - cho [anh](cust_sex) biết PYC nóng là gì?
+    - cho [chị](cust_sex) biết PYC nóng là gì?
+    - cho [em](cust_sex) biết PYC nóng là gì?
+    - cho tôi biết phiếu yêu cầu nóng là gì?
+    - cho [anh](cust_sex) biết phiếu yêu cầu nóng là gì?
+    - cho [chị](cust_sex) biết phiếu yêu cầu nóng là gì?
+    - cho [em](cust_sex) biết phiếu yêu cầu nóng là gì?
+    - cho tôi biết phiếu yêu cầu nóng là gì?
+
+- intent: input_guibanduthaoPYCphanmem
+  examples: |
+    - đầu vào của gửi bản dự thảo PYC phần mềm
+    - đầu vào của việc gửi bản dự thảo PYC phần mềm
+    - đầu vào của gửi bản dự thảo phiếu yêu cầu phần mềm
+    - đầu vào của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - cho tôi biết đầu vào của việc gửi bản dự thảo PYC phần mềm
+    - cho [anh](cust_sex) biết đầu vào của việc gửi bản dự thảo PYC phần mềm
+    - cho [chị](cust_sex) biết đầu vào của việc gửi bản dự thảo PYC phần mềm
+    - cho [em](cust_sex) biết đầu vào của việc gửi bản dự thảo PYC phần mềm
+    - cho [mình](cust_sex) biết đầu vào của việc gửi bản dự thảo PYC phần mềm
+    - tôi muốn biết đầu vào của việc gửi bản dự thảo PYC phần mềm
+    - [anh](cust_sex) muốn biết đầu vào của việc gửi bản dự thảo PYC phần mềm
+    - [chị](cust_sex) muốn biết đầu vào của việc gửi bản dự thảo PYC phần mềm
+    - [em](cust_sex) muốn biết đầu vào của việc gửi bản dự thảo PYC phần mềm
+    - [mình](cust_sex) muốn biết đầu vào của việc gửi bản dự thảo PYC phần mềm
+
+- intent: content_guibanduthaoPYCphanmem
+  examples: |
+    - nội dung của gửi bản dự thảo PYC phần mềm
+    - nội dung của việc gửi bản dự thảo PYC phần mềm
+    - nội dung của gửi bản dự thảo phiếu yêu cầu phần mềm
+    - nội dung của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - cho tôi biết nội dung của việc gửi bản dự thảo PYC phần mềm
+    - nội dung thực hiện của gửi bản dự thảo PYC phần mềm
+    - nội dung thực hiện của việc gửi bản dự thảo PYC phần mềm
+    - nội dung thực hiện gửi bản dự thảo phiếu yêu cầu phần mềm
+    - nội dung thực hiện của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - cho tôi biết nội dung thực hiện của việc gửi bản dự thảo PYC phần mềm
+    - cho [anh](cust_sex) biết nội dung của việc gửi bản dự thảo PYC phần mềm
+    - cho [chị](cust_sex) biết nội dung của việc gửi bản dự thảo PYC phần mềm
+    - cho [em](cust_sex) biết nội dung của việc gửi bản dự thảo PYC phần mềm
+    - cho [mình](cust_sex) biết nội dung của việc gửi bản dự thảo PYC phần mềm
+    - tôi muốn biết nội dung của việc gửi bản dự thảo PYC phần mềm
+    - [anh](cust_sex) muốn biết nội dung của việc gửi bản dự thảo PYC phần mềm
+    - [chị](cust_sex) muốn biết nội dung của việc gửi bản dự thảo PYC phần mềm
+    - [em](cust_sex) muốn biết nội dung của việc gửi bản dự thảo PYC phần mềm
+    - [mình](cust_sex) muốn biết nội dung của việc gửi bản dự thảo PYC phần mềm
+
+- intent: output_guibanduthaoPYCphanmem
+  examples: |
+    - đầu ra của gửi bản dự thảo PYC phần mềm
+    - đầu ra của việc gửi bản dự thảo PYC phần mềm
+    - đầu ra của gửi bản dự thảo phiếu yêu cầu phần mềm
+    - đầu ra của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - cho tôi biết đầu ra của việc gửi bản dự thảo PYC phần mềm
+    - cho [anh](cust_sex) biết đầu ra của việc gửi bản dự thảo PYC phần mềm
+    - cho [chị](cust_sex) biết đầu ra của việc gửi bản dự thảo PYC phần mềm
+    - cho [em](cust_sex) biết đầu ra của việc gửi bản dự thảo PYC phần mềm
+    - cho [mình](cust_sex) biết đầu ra của việc gửi bản dự thảo PYC phần mềm
+    - tôi muốn biết đầu ra của việc gửi bản dự thảo PYC phần mềm
+    - [anh](cust_sex) muốn biết đầu ra của việc gửi bản dự thảo PYC phần mềm
+    - [chị](cust_sex) muốn biết đầu ra của việc gửi bản dự thảo PYC phần mềm
+    - [em](cust_sex) muốn biết đầu ra của việc gửi bản dự thảo PYC phần mềm
+    - [mình](cust_sex) muốn biết đầu ra của việc gửi bản dự thảo PYC phần mềm
+
+- intent: DVTH_guibanduthaoPYCphanmem
+  examples: |
+    - đơn vị thực hiện của gửi bản dự thảo PYC phần mềm
+    - đơn vị thực hiện của việc gửi bản dự thảo PYC phần mềm
+    - đơn vị thực hiện của gửi bản dự thảo phiếu yêu cầu phần mềm
+    - đơn vị thực hiện của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - cho tôi biết đơn vị thực hiện của việc gửi bản dự thảo PYC phần mềm
+    - cho [anh](cust_sex) biết đơn vị thực hiện của việc gửi bản dự thảo PYC phần mềm
+    - cho [chị](cust_sex) biết đơn vị thực hiện của việc gửi bản dự thảo PYC phần mềm
+    - cho [em](cust_sex) biết đơn vị thực hiện của việc gửi bản dự thảo PYC phần mềm
+    - cho [mình](cust_sex) biết đơn vị thực hiện của việc gửi bản dự thảo PYC phần mềm
+    - tôi muốn biết đơn vị thực hiện của việc gửi bản dự thảo PYC phần mềm
+    - [anh](cust_sex) muốn biết đơn vị thực hiện của việc gửi bản dự thảo PYC phần mềm
+    - [chị](cust_sex) muốn biết đơn vị thực hiện của việc gửi bản dự thảo PYC phần mềm
+    - [em](cust_sex) muốn biết đơn vị thực hiện của việc gửi bản dự thảo PYC phần mềm
+    - [mình](cust_sex) muốn biết đơn vị thực hiện của việc gửi bản dự thảo PYC phần mềm
+
+- intent: TGTH_guibanduthaoPYCphanmem
+  examples: |
+    - thời gian thực hiện của gửi bản dự thảo PYC phần mềm
+    - thời gian thực hiện của việc gửi bản dự thảo PYC phần mềm
+    - thời gian thực hiện của gửi bản dự thảo phiếu yêu cầu phần mềm
+    - thời gian thực hiện của việc gửi bản dự thảo phiếu yêu cầu phần mềm
+    - cho tôi biết thời gian thực hiện của việc gửi bản dự thảo PYC phần mềm
+    - cho [anh](cust_sex) biết thời gian thực hiện của việc gửi bản dự thảo PYC phần mềm
+    - cho [chị](cust_sex) biết thời gian thực hiện của việc gửi bản dự thảo PYC phần mềm
+    - cho [em](cust_sex) biết thời gian thực hiện của việc gửi bản dự thảo PYC phần mềm
+    - cho [mình](cust_sex) biết thời gian thực hiện của việc gửi bản dự thảo PYC phần mềm
+    - tôi muốn biết thời gian thực hiện của việc gửi bản dự thảo PYC phần mềm
+    - [anh](cust_sex) muốn biết thời gian thực hiện của việc gửi bản dự thảo PYC phần mềm
+    - [chị](cust_sex) muốn biết thời gian thực hiện của việc gửi bản dự thảo PYC phần mềm
+    - [em](cust_sex) muốn biết thời gian thực hiện của việc gửi bản dự thảo PYC phần mềm
+    - [mình](cust_sex) muốn biết thời gian thực hiện của việc gửi bản dự thảo PYC phần mềm
+
+- intent: implementation_tool_guibanduthaoPYCphanmem
+  examples: |
+    - công cụ thực hiện gửi bản dự thảo PYC phần mềm
+    - công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - công cụ thực hiện của gửi bản dự thảo phiếu yêu cầu phần mềm
+    - công cụ thực hiện việc của gửi bản dự thảo phiếu yêu cầu phần mềm
+    - cho tôi biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - cho [anh](cust_sex) biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - cho [chị](cust_sex) biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - cho [em](cust_sex) biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - cho [mình](cust_sex) biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - tôi muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - [anh](cust_sex) muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - [chị](cust_sex) muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - [em](cust_sex) muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - [mình](cust_sex) muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+
+# I.2. Làm rõ PYC bài toán
+- intent: purpose_lamroPYCbaitoan
+  examples: |
+    - mục dích của việc làm rõ PYC bài toán
+    - mục dích của việc làm rõ PYC
+    - mục dích của làm rõ PYC bài toán
+    - mục dích của việc làm rõ phiếu yêu cầu bài toán
+    - mục dích của việc làm rõ phiếu yêu cầu
+    - mục dích của làm rõ phiếu yêu cầu bài toán
+    - cho tôi biết mục đích của việc làm rõ PYC bài toán
+    - cho [anh](cust_sex) biết mục đích của việc làm rõ PYC bài toán
+    - cho [chị](cust_sex) biết mục đích của việc làm rõ PYC bài toán
+    - cho [em](cust_sex) biết mục đích của việc làm rõ PYC bài toán
+    - cho [mình](cust_sex) biết mục đích của việc làm rõ PYC bài toán
+    - tôi muốn biết mục đích của việc làm rõ PYC bài toán
+    - [anh](cust_sex) muốn biết mục đích của việc làm rõ PYC bài toán
+    - [chị](cust_sex) muốn biết mục đích của việc làm rõ PYC bài toán
+    - [em](cust_sex) muốn biết mục đích của việc làm rõ PYC bài toán
+    - [mình](cust_sex) muốn biết mục đích của việc làm rõ PYC bài toán
+    - cho tôi biết mục đích của việc làm rõ phiếu yêu cầu bài toán
+    - cho [anh](cust_sex) biết mục đích của việc làm rõ phiếu yêu cầu bài toán
+    - cho [chị](cust_sex) biết mục đích của việc làm rõ phiếu yêu cầu bài toán
+    - cho [em](cust_sex) biết mục đích của việc làm rõ phiếu yêu cầu bài toán
+    - cho [mình](cust_sex) biết mục đích của việc làm rõ phiếu yêu cầu bài toán
+    - tôi muốn biết mục đích của việc làm rõ phiếu yêu cầu bài toán
+    - [anh](cust_sex) muốn biết mục đích của việc làm rõ phiếu yêu cầu bài toán
+    - [chị](cust_sex) muốn biết mục đích của việc làm rõ phiếu yêu cầu bài toán
+    - [em](cust_sex) muốn biết mục đích của việc làm rõ phiếu yêu cầu bài toán
+    - [mình](cust_sex) muốn biết mục đích của việc làm rõ phiếu yêu cầu bài toán
+
+- intent: dkkichhoat_lamroPYCbaitoan
+  examples: |
+    - điều kiện kích hoạt của làm rõ PYC bài toán
+    - điều kiện kích hoạt của việc làm rõ PYC bài toán
+    - cho tôi biết điều kiện kích hoạt của làm rõ PYC bài toán
+    - cho [anh](cust_sex) biết điều kiện kích hoạt của làm rõ PYC bài toán
+    - cho [chị](cust_sex) biết điều kiện kích hoạt của làm rõ PYC bài toán
+    - cho [em](cust_sex) biết điều kiện kích hoạt của làm rõ PYC bài toán
+    - cho [mình](cust_sex) biết điều kiện kích hoạt của làm rõ PYC bài toán
+    - tôi muốn biết điều kiện kích hoạt của làm rõ PYC bài toán
+    - [anh](cust_sex) muốn biết điều kiện kích hoạt của làm rõ PYC bài toán
+    - [chị](cust_sex) muốn biết điều kiện kích hoạt của làm rõ PYC bài toán
+    - [em](cust_sex) muốn biết điều kiện kích hoạt của làm rõ PYC bài toán
+    - [mình](cust_sex) muốn biết điều kiện kích hoạt của làm rõ PYC bài toán
+    - điều kiện kích hoạt của làm rõ phiếu yêu cầu bài toán
+    - điều kiện kích hoạt của việc làm rõ phiếu yêu cầu bài toán
+    - cho tôi biết điều kiện kích hoạt của làm rõ phiếu yêu cầu bài toán
+    - cho [anh](cust_sex) biết điều kiện kích hoạt của làm rõ phiếu yêu cầu bài toán
+    - cho [chị](cust_sex) biết điều kiện kích hoạt của làm rõ phiếu yêu cầu bài toán
+    - cho [em](cust_sex) biết điều kiện kích hoạt của làm rõ phiếu yêu cầu bài toán
+    - cho [mình](cust_sex) biết điều kiện kích hoạt của làm rõ phiếu yêu cầu bài toán
+    - tôi muốn biết điều kiện kích hoạt của làm rõ phiếu yêu cầu bài toán
+    - [anh](cust_sex) muốn biết điều kiện kích hoạt của làm rõ phiếu yêu cầu bài toán
+    - [chị](cust_sex) muốn biết điều kiện kích hoạt của làm rõ phiếu yêu cầu bài toán
+    - [em](cust_sex) muốn biết điều kiện kích hoạt của làm rõ phiếu yêu cầu bài toán
+    - [mình](cust_sex) muốn biết điều kiện kích hoạt của làm rõ phiếu yêu cầu bài toán
+
+- intent: thongtindauvao_lamroPYCbaitoan
+  examples: |
+    - thông tin đầu vào của làm rõ PYC bài toán
+    - thông tin đầu vào của việc làm rõ PYC bài toán
+    - cho biết thông tin đầu vào của việc làm rõ PYC bài toán
+    - cho tôi biết thông tin đầu vào của việc làm rõ PYC bài toán
+    - cho [anh](cust_sex) biết thông tin đầu vào của việc làm rõ PYC bài toán
+    - cho [chị](cust_sex) biết thông tin đầu vào của việc làm rõ PYC bài toán
+    - cho [em](cust_sex) biết thông tin đầu vào của việc làm rõ PYC bài toán
+    - cho [mình](cust_sex) biết thông tin đầu vào của việc làm rõ PYC bài toán
+    - tôi muốn biết thông tin đầu vào của việc làm rõ PYC bài toán
+    - [anh](cust_sex) muốn biết thông tin đầu vào của việc làm rõ PYC bài toán
+    - [chị](cust_sex) muốn biết thông tin đầu vào của việc làm rõ PYC bài toán
+    - [em](cust_sex) muốn biết thông tin đầu vào của việc làm rõ PYC bài toán
+    - [mình](cust_sex) muốn biết thông tin đầu vào của việc làm rõ PYC bài toán
+    - thông tin đầu vào của làm rõ phiếu yêu cầu bài toán
+    - thông tin đầu vào của việc làm rõ phiếu yêu cầu bài toán
+    - cho biết thông tin đầu vào của việc làm rõ phiếu yêu cầu bài toán
+    - cho tôi biết thông tin đầu vào của việc làm rõ phiếu yêu cầu bài toán
+    - cho [anh](cust_sex) biết thông tin đầu vào của việc làm rõ phiếu yêu cầu bài toán
+    - cho [chị](cust_sex) biết thông tin đầu vào của việc làm rõ phiếu yêu cầu bài toán
+    - cho [em](cust_sex) biết thông tin đầu vào của việc làm rõ phiếu yêu cầu bài toán
+    - cho [mình](cust_sex) biết thông tin đầu vào của việc làm rõ phiếu yêu cầu bài toán
+    - tôi muốn biết thông tin đầu vào của việc làm rõ phiếu yêu cầu bài toán
+    - [anh](cust_sex) muốn biết thông tin đầu vào của việc làm rõ phiếu yêu cầu bài toán
+    - [chị](cust_sex) muốn biết thông tin đầu vào của việc làm rõ phiếu yêu cầu bài toán
+    - [em](cust_sex) muốn biết thông tin đầu vào của việc làm rõ phiếu yêu cầu bài toán
+    - [mình](cust_sex) muốn biết thông tin đầu vào của việc làm rõ phiếu yêu cầu bài toán
+
+- intent: lamroyeucau_lamroPYCbaitoan
+  examples: |
+    - ai sẽ làm rõ yêu cầu bài toán
+    - ai sẽ làm rõ yêu cầu
+    - ai sẽ làm rõ yêu cầu bài toán với ĐVYC
+    - cho tôi biết ai sẽ làm rõ yêu cầu bài toán
+    - cho [anh](cust_sex) biết ai sẽ làm rõ yêu cầu bài toán
+    - cho [chị](cust_sex) biết ai sẽ làm rõ yêu cầu bài toán
+    - cho [em](cust_sex) biết ai sẽ làm rõ yêu cầu bài toán
+    - cho [mình](cust_sex) biết ai sẽ làm rõ yêu cầu bài toán
+    - tôi muốn biết ai sẽ làm rõ yêu cầu bài toán
+    - [anh](cust_sex) muốn biết ai sẽ làm rõ yêu cầu bài toán
+    - [chị](cust_sex) muốn biết ai sẽ làm rõ yêu cầu bài toán
+    - [em](cust_sex) muốn biết ai sẽ làm rõ yêu cầu bài toán
+    - [mình](cust_sex) muốn biết ai sẽ làm rõ yêu cầu bài toán
+
+- intent: thoigianlamro_lamroPYCbaitoan
+  examples: |
+    - ĐVYC làm rõ bài toán trong bao lâu?
+    - bài toán được làm rõ trong bao lâu?
+    - yêu cầu được làm rõ trong bao lâu?
+    - thời gian làm rõ bài toán?
+    - thời gian làm rõ yêu cầu?
+    - làm rõ bài toán trong bao lâu?
+    - đơn vị yêu cầu làm rõ bài toán trong bao lâu?
+    - cho tôi biết bài toán được làm rõ trong bao lâu?
+    - cho [anh](cust_sex) biết bài toán được làm rõ trong bao lâu?
+    - cho [chị](cust_sex) biết bài toán được làm rõ trong bao lâu?
+    - cho [em](cust_sex) biết bài toán được làm rõ trong bao lâu?
+    - cho [mình](cust_sex) biết bài toán được làm rõ trong bao lâu?
+    - tôi muốn biết bài toán được làm rõ trong bao lâu?
+    - [anh](cust_sex) muốn biết bài toán được làm rõ trong bao lâu?
+    - [chị](cust_sex) muốn biết bài toán được làm rõ trong bao lâu?
+    - [em](cust_sex) muốn biết bài toán được làm rõ trong bao lâu?
+    - [mình](cust_sex) muốn biết bài toán được làm rõ trong bao lâu?
+
+- intent: input_lamroPYCbaitoan
+  examples: |
+    - đầu vào của làm rõ PYC bài toán
+    - đầu vào của việc làm rõ PYC bài toán
+    - đầu vào của làm rõ PYC bài toán là gì?
+    - đầu vào của việc làm rõ PYC bài toán là gì?
+    - đầu vào của làm rõ phiếu yêu cầu bài toán
+    - đầu vào của việc làm rõ phiếu yêu cầu bài toán
+    - cho tôi biết đầu vào của việc làm rõ PYC bài toán
+    - cho [anh](cust_sex) biết đầu vào của việc làm rõ PYC bài toán
+    - cho [chị](cust_sex) biết đầu vào của việc làm rõ PYC bài toán
+    - cho [em](cust_sex) biết đầu vào của việc làm rõ PYC bài toán
+    - cho [mình](cust_sex) biết đầu vào của việc làm rõ PYC bài toán
+    - tôi muốn biết đầu vào của việc làm rõ PYC bài toán
+    - [anh](cust_sex) muốn biết đầu vào của việc làm rõ PYC bài toán
+    - [chị](cust_sex) muốn biết đầu vào của việc làm rõ PYC bài toán
+    - [em](cust_sex) muốn biết đầu vào của việc làm rõ PYC bài toán
+    - [mình](cust_sex) muốn biết đầu vào của việc làm rõ PYC bài toán
+
+- intent: content_lamroPYCbaitoan
+  examples: |
+    - nội dung của làm rõ PYC bài toán
+    - nội dung của việc làm rõ PYC bài toán
+    - nội dung của làm rõ PYC bài toán là gì?
+    - nội dung của việc làm rõ PYC bài toán là gì?
+    - nội dung của làm rõ phiếu yêu cầu bài toán
+    - nội dung của việc làm rõ phiếu yêu cầu bài toán
+    - nội dung thực hiện của làm rõ PYC bài toán
+    - nội dung thực hiện của việc làm rõ PYC bài toán
+    - nội dung thực hiện của làm rõ PYC bài toán là gì?
+    - nội dung thực hiện của việc làm rõ PYC bài toán là gì?
+    - nội dung thực hiện của làm rõ phiếu yêu cầu bài toán
+    - nội dung thực hiện của việc làm rõ phiếu yêu cầu bài toán
+    - cho tôi biết nội dung của việc làm rõ PYC bài toán
+    - cho [anh](cust_sex) biết nội dung của việc làm rõ PYC bài toán
+    - cho [chị](cust_sex) biết nội dung của việc làm rõ PYC bài toán
+    - cho [em](cust_sex) biết nội dung của việc làm rõ PYC bài toán
+    - cho [mình](cust_sex) biết nội dung của việc làm rõ PYC bài toán
+    - tôi muốn biết nội dung của việc làm rõ PYC bài toán
+    - [anh](cust_sex) muốn biết nội dung của việc làm rõ PYC bài toán
+    - [chị](cust_sex) muốn biết nội dung của việc làm rõ PYC bài toán
+    - [em](cust_sex) muốn biết nội dung của việc làm rõ PYC bài toán
+    - [mình](cust_sex) muốn biết nội dung của việc làm rõ PYC bài toán
+
+- intent: output_lamroPYCbaitoan
+  examples: |
+    - đầu ra của làm rõ PYC bài toán
+    - đầu ra của việc làm rõ PYC bài toán
+    - đầu ra của làm rõ PYC bài toán là gì?
+    - đầu ra của việc làm rõ PYC bài toán là gì?
+    - đầu ra của làm rõ phiếu yêu cầu bài toán
+    - đầu ra của việc làm rõ phiếu yêu cầu bài toán
+    - cho tôi biết đầu ra của việc làm rõ PYC bài toán
+    - cho [anh](cust_sex) biết đầu ra của việc làm rõ PYC bài toán
+    - cho [chị](cust_sex) biết đầu ra của việc làm rõ PYC bài toán
+    - cho [em](cust_sex) biết đầu ra của việc làm rõ PYC bài toán
+    - cho [mình](cust_sex) biết đầu ra của việc làm rõ PYC bài toán
+    - tôi muốn biết đầu ra của việc làm rõ PYC bài toán
+    - [anh](cust_sex) muốn biết đầu ra của việc làm rõ PYC bài toán
+    - [chị](cust_sex) muốn biết đầu ra của việc làm rõ PYC bài toán
+    - [em](cust_sex) muốn biết đầu ra của việc làm rõ PYC bài toán
+    - [mình](cust_sex) muốn biết đầu ra của việc làm rõ PYC bài toán
+
+- intent: DVTH_lamroPYCbaitoan
+  examples: |
+    - đơn vị thực hiện của làm rõ PYC bài toán
+    - đơn vị thực hiện của việc làm rõ PYC bài toán
+    - đơn vị thực hiện của làm rõ PYC bài toán là ai?
+    - đơn vị thực hiện của việc làm rõ PYC bài toán là ai?
+    - đơn vị thực hiện của làm rõ phiếu yêu cầu bài toán
+    - đơn vị thực hiện của việc làm rõ phiếu yêu cầu bài toán
+    - cho tôi biết đơn vị thực hiện của việc làm rõ PYC bài toán
+    - cho [anh](cust_sex) biết đơn vị thực hiện của việc làm rõ PYC bài toán
+    - cho [chị](cust_sex) biết đơn vị thực hiện của việc làm rõ PYC bài toán
+    - cho [em](cust_sex) biết đơn vị thực hiện của việc làm rõ PYC bài toán
+    - cho [mình](cust_sex) biết đơn vị thực hiện của việc làm rõ PYC bài toán
+    - tôi muốn biết đơn vị thực hiện của việc làm rõ PYC bài toán
+    - [anh](cust_sex) muốn biết đơn vị thực hiện của việc làm rõ PYC bài toán
+    - [chị](cust_sex) muốn biết đơn vị thực hiện của việc làm rõ PYC bài toán
+    - [em](cust_sex) muốn biết đơn vị thực hiện của việc làm rõ PYC bài toán
+    - [mình](cust_sex) muốn biết đơn vị thực hiện của việc làm rõ PYC bài toán
+
+- intent: TGTH_lamroPYCbaitoan
+  examples: |
+    - mất bao lâu để làm rõ PYC bài toán
+    - mất bao lâu để làm rõ phiếu yêu cầu bài toán
+    - thời gian thực hiện làm rõ PYC bài toán
+    - thời gian thực hiện của việc làm rõ PYC bài toán
+    - thời gian thực hiện làm rõ PYC bài toán là bao lâu?
+    - thời gian thực hiện của việc làm rõ PYC bài toán là bao lâu?
+    - thời gian thực hiện làm rõ phiếu yêu cầu bài toán
+    - thời gian thực hiện của việc làm rõ phiếu yêu cầu bài toán
+    - cho tôi biết thời gian thực hiện của việc làm rõ PYC bài toán
+    - cho [anh](cust_sex) biết thời gian thực hiện của việc làm rõ PYC bài toán
+    - cho [chị](cust_sex) biết thời gian thực hiện của việc làm rõ PYC bài toán
+    - cho [em](cust_sex) biết thời gian thực hiện của việc làm rõ PYC bài toán
+    - cho [mình](cust_sex) biết thời gian thực hiện của việc làm rõ PYC bài toán
+    - tôi muốn biết thời gian thực hiện của việc làm rõ PYC bài toán
+    - [anh](cust_sex) muốn biết thời gian thực hiện của việc làm rõ PYC bài toán
+    - [chị](cust_sex) muốn biết thời gian thực hiện của việc làm rõ PYC bài toán
+    - [em](cust_sex) muốn biết thời gian thực hiện của việc làm rõ PYC bài toán
+    - [mình](cust_sex) muốn biết thời gian thực hiện của việc làm rõ PYC bài toán
+
+- intent: implementation_tool_lamroPYCbaitoan
+  examples: |
+    - công cụ thực hiện làm rõ PYC bài toán
+    - công cụ thực hiện việc làm rõ PYC bài toán
+    - công cụ thực hiện làm rõ PYC bài toán là gì?
+    - công cụ thực hiện việc làm rõ PYC bài toán là gì?
+    - công cụ thực hiện của làm rõ phiếu yêu cầu bài toán
+    - công cụ thực hiện việc của làm rõ phiếu yêu cầu bài toán
+    - cho tôi biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - cho [anh](cust_sex) biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - cho [chị](cust_sex) biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - cho [em](cust_sex) biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - cho [mình](cust_sex) biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - tôi muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - [anh](cust_sex) muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - [chị](cust_sex) muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - [em](cust_sex) muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - [mình](cust_sex) muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+
+
+# I.3. Hoàn thiện nội dung PYC, trình ký lãnh đạo các đơn vị 
+- intent: purpose_hoanthiennoidungPYC
+  examples: |
+    - mục dích của việc hoàn thiện nội dung PYC
+    - mục dích của hoàn thiện nội dung PYC
+    - mục dích của việc hoàn thiện nội dung PYC là gì?
+    - mục dích của hoàn thiện nội dung PYC là gì?
+    - mục dích của việc hoàn thiện nội dung phiếu yêu cầu
+    - mục dích của hoàn thiện nội dung phiếu yêu cầu
+    - cho tôi biết mục đích của việc hoàn thiện nội dung PYC
+    - cho [anh](cust_sex) biết mục đích của việc hoàn thiện nội dung PYC
+    - cho [chị](cust_sex) biết mục đích của việc hoàn thiện nội dung PYC
+    - cho [em](cust_sex) biết mục đích của việc hoàn thiện nội dung PYC
+    - cho [mình](cust_sex) biết mục đích của việc hoàn thiện nội dung PYC
+    - tôi muốn biết mục đích của việc hoàn thiện nội dung PYC
+    - [anh](cust_sex) muốn biết mục đích của việc hoàn thiện nội dung PYC
+    - [chị](cust_sex) muốn biết mục đích của việc hoàn thiện nội dung PYC
+    - [em](cust_sex) muốn biết mục đích của việc hoàn thiện nội dung PYC
+    - [mình](cust_sex) muốn biết mục đích của việc hoàn thiện nội dung PYC
+    - cho tôi biết mục đích của việc hoàn thiện nội dung phiếu yêu cầu
+    - cho [anh](cust_sex) biết mục đích của việc hoàn thiện nội dung phiếu yêu cầu
+    - cho [chị](cust_sex) biết mục đích của việc hoàn thiện nội dung phiếu yêu cầu
+    - cho [em](cust_sex) biết mục đích của việc hoàn thiện nội dung phiếu yêu cầu
+    - cho [mình](cust_sex) biết mục đích của việc hoàn thiện nội dung phiếu yêu cầu
+    - tôi muốn biết mục đích của việc hoàn thiện nội dung phiếu yêu cầu
+    - [anh](cust_sex) muốn biết mục đích của việc hoàn thiện nội dung phiếu yêu cầu
+    - [chị](cust_sex) muốn biết mục đích của việc hoàn thiện nội dung phiếu yêu cầu
+    - [em](cust_sex) muốn biết mục đích của việc hoàn thiện nội dung phiếu yêu cầu
+    - [mình](cust_sex) muốn biết mục đích của việc hoàn thiện nội dung phiếu yêu cầu
+
+- intent: dkkichhoat_hoanthiennoidungPYC
+  examples: |
+    - điều kiện kích hoạt của hoàn thiện nội dung PYC
+    - điều kiện kích hoạt của việc hoàn thiện nội dung PYC
+    - điều kiện kích hoạt của hoàn thiện nội dung PYC là gì?
+    - điều kiện kích hoạt của việc hoàn thiện nội dung PYC là gì?
+    - cho tôi biết điều kiện kích hoạt của hoàn thiện nội dung PYC
+    - cho [anh](cust_sex) biết điều kiện kích hoạt của hoàn thiện nội dung PYC
+    - cho [chị](cust_sex) biết điều kiện kích hoạt của hoàn thiện nội dung PYC
+    - cho [em](cust_sex) biết điều kiện kích hoạt của hoàn thiện nội dung PYC
+    - cho [mình](cust_sex) biết điều kiện kích hoạt của hoàn thiện nội dung PYC
+    - tôi muốn biết điều kiện kích hoạt của hoàn thiện nội dung PYC
+    - [anh](cust_sex) muốn biết điều kiện kích hoạt của hoàn thiện nội dung PYC
+    - [chị](cust_sex) muốn biết điều kiện kích hoạt của hoàn thiện nội dung PYC
+    - [em](cust_sex) muốn biết điều kiện kích hoạt của hoàn thiện nội dung PYC
+    - [mình](cust_sex) muốn biết điều kiện kích hoạt của hoàn thiện nội dung PYC
+    - điều kiện kích hoạt của hoàn thiện nội dung phiếu yêu cầu
+    - điều kiện kích hoạt của việc hoàn thiện nội dung phiếu yêu cầu
+    - cho  tôi biết điều kiện kích hoạt của hoàn thiện nội dung phiếu yêu cầu
+    - cho [anh](cust_sex) biết điều kiện kích hoạt của hoàn thiện nội dung phiếu yêu cầu
+    - cho [chị](cust_sex) biết điều kiện kích hoạt của hoàn thiện nội dung phiếu yêu cầu
+    - cho [em](cust_sex) biết điều kiện kích hoạt của hoàn thiện nội dung phiếu yêu cầu
+    - cho [mình](cust_sex) biết điều kiện kích hoạt của hoàn thiện nội dung phiếu yêu cầu
+    - tôi muốn biết điều kiện kích hoạt của hoàn thiện nội dung phiếu yêu cầu
+    - [anh](cust_sex) muốn biết điều kiện kích hoạt của hoàn thiện nội dung phiếu yêu cầu
+    - [chị](cust_sex) muốn biết điều kiện kích hoạt của hoàn thiện nội dung phiếu yêu cầu
+    - [em](cust_sex) muốn biết điều kiện kích hoạt của hoàn thiện nội dung phiếu yêu cầu
+    - [mình](cust_sex) muốn biết điều kiện kích hoạt của hoàn thiện nội dung phiếu yêu cầu
+
+- intent: thongtindauvao_hoanthiennoidungPYC
+  examples: |
+    - thông tin đầu vào của hoàn thiện nội dung PYC
+    - thông tin đầu vào của việc hoàn thiện nội dung PYC
+    - thông tin đầu vào của hoàn thiện nội dung PYC là gì?
+    - thông tin đầu vào của việc hoàn thiện nội dung PYC là gì?
+    - cho biết thông tin đầu vào của việc hoàn thiện nội dung PYC
+    - cho tôi biết thông tin đầu vào của việc hoàn thiện nội dung PYC
+    - cho [anh](cust_sex) biết thông tin đầu vào của việc hoàn thiện nội dung PYC
+    - cho [chị](cust_sex) biết thông tin đầu vào của việc hoàn thiện nội dung PYC
+    - cho [em](cust_sex) biết thông tin đầu vào của việc hoàn thiện nội dung PYC
+    - cho [mình](cust_sex) biết thông tin đầu vào của việc hoàn thiện nội dung PYC
+    - tôi muốn biết thông tin đầu vào của việc hoàn thiện nội dung PYC
+    - [anh](cust_sex) muốn biết thông tin đầu vào của việc hoàn thiện nội dung PYC
+    - [chị](cust_sex) muốn biết thông tin đầu vào của việc hoàn thiện nội dung PYC
+    - [em](cust_sex) muốn biết thông tin đầu vào của việc hoàn thiện nội dung PYC
+    - [mình](cust_sex) muốn biết thông tin đầu vào của việc hoàn thiện nội dung PYC
+    - thông tin đầu vào của hoàn thiện nội dung phiếu yêu cầu
+    - thông tin đầu vào của việc hoàn thiện nội dung phiếu yêu cầu
+    - cho biết thông tin đầu vào của việc hoàn thiện nội dung phiếu yêu cầu
+
+- intent: input_hoanthiennoidungPYC
+  examples: |
+    - đầu vào của hoàn thiện nội dung PYC
+    - đầu vào của việc hoàn thiện nội dung PYC
+    - đầu vào của hoàn thiện nội dung PYC là gì?
+    - đầu vào của việc hoàn thiện nội dung PYC là gì?
+    - đầu vào của hoàn thiện nội dung phiếu yêu cầu
+    - đầu vào của việc hoàn thiện nội dung phiếu yêu cầu
+    - cho tôi biết đầu vào của việc làm rõ PYC bài toán
+    - cho [anh](cust_sex) biết đầu vào của việc hoàn thiện nội dung PYC
+    - cho [chị](cust_sex) biết đầu vào của việc hoàn thiện nội dung PYC
+    - cho [em](cust_sex) biết đầu vào của việc hoàn thiện nội dung PYC
+    - cho [mình](cust_sex) biết đầu vào của việc hoàn thiện nội dung PYC
+    - tôi muốn biết đầu vào của việc hoàn thiện nội dung PYC
+    - [anh](cust_sex) muốn biết đầu vào của việc hoàn thiện nội dung PYC
+    - [chị](cust_sex) muốn biết đầu vào của việc hoàn thiện nội dung PYC
+    - [em](cust_sex) muốn biết đầu vào của việc hoàn thiện nội dung PYC
+    - [mình](cust_sex) muốn biết đầu vào của việc hoàn thiện nội dung PYC
+
+- intent: content_hoanthiennoidungPYC
+  examples: |
+    - nội dung của hoàn thiện nội dung PYC
+    - nội dung của việc hoàn thiện nội dung PYC
+    - nội dung của hoàn thiện nội dung PYC là gì?
+    - nội dung của việc hoàn thiện nội dung PYC là gì?
+    - nội dung của hoàn thiện nội dung phiếu yêu cầu
+    - nội dung của việc hoàn thiện nội dung phiếu yêu cầu
+    - nội dung thực hiện của hoàn thiện nội dung PYC
+    - nội dung thực hiện của việc hoàn thiện nội dung PYC
+    - nội dung thực hiện của hoàn thiện nội dung PYC là gì?
+    - nội dung thực hiện của việc hoàn thiện nội dung PYC là gì?
+    - nội dung thực hiện của hoàn thiện nội dung phiếu yêu cầu
+    - nội dung thực hiện của việc hoàn thiện nội dung phiếu yêu cầu
+    - cho tôi biết nội dung của việc hoàn thiện nội dung PYC
+    - cho [anh](cust_sex) biết nội dung của việc hoàn thiện nội dung PYC
+    - cho [chị](cust_sex) biết nội dung của việc hoàn thiện nội dung PYC
+    - cho [em](cust_sex) biết nội dung của việc hoàn thiện nội dung PYC
+    - cho [mình](cust_sex) biết nội dung của việc hoàn thiện nội dung PYC
+    - tôi muốn biết nội dung của việc hoàn thiện nội dung PYC
+    - [anh](cust_sex) muốn biết nội dung của việc hoàn thiện nội dung PYC
+    - [chị](cust_sex) muốn biết nội dung của việc hoàn thiện nội dung PYC
+    - [em](cust_sex) muốn biết nội dung của việc hoàn thiện nội dung PYC
+    - [mình](cust_sex) muốn biết nội dung của việc hoàn thiện nội dung PYC
+
+- intent: output_hoanthiennoidungPYC
+  examples: |
+    - đầu ra của hoàn thiện nội dung PYC
+    - đầu ra của việc hoàn thiện nội dung PYC
+    - đầu ra của hoàn thiện nội dung PYC là gì?
+    - đầu ra của việc hoàn thiện nội dung PYC là gì?
+    - đầu ra của hoàn thiện nội dung phiếu yêu cầu
+    - đầu ra của việc hoàn thiện nội dung phiếu yêu cầu
+    - cho tôi biết đầu ra của việc hoàn thiện nội dung PYC
+    - cho [anh](cust_sex) biết đầu ra của việc hoàn thiện nội dung PYC
+    - cho [chị](cust_sex) biết đầu ra của việc hoàn thiện nội dung PYC
+    - cho [em](cust_sex) biết đầu ra của việc hoàn thiện nội dung PYC
+    - cho [mình](cust_sex) biết đầu ra của việc hoàn thiện nội dung PYC
+    - tôi muốn biết đầu ra của việc hoàn thiện nội dung PYC
+    - [anh](cust_sex) muốn biết đầu ra của việc hoàn thiện nội dung PYC
+    - [chị](cust_sex) muốn biết đầu ra của việc hoàn thiện nội dung PYC
+    - [em](cust_sex) muốn biết đầu ra của việc hoàn thiện nội dung PYC
+    - [mình](cust_sex) muốn biết đầu ra của việc hoàn thiện nội dung PYC
+
+- intent: DVTH_hoanthiennoidungPYC
+  examples: |
+    - đơn vị thực hiện của hoàn thiện nội dung PYC
+    - đơn vị thực hiện của việc hoàn thiện nội dung PYC
+    - đơn vị thực hiện của hoàn thiện nội dung PYC là ai?
+    - đơn vị thực hiện của việc hoàn thiện nội dung PYC là ai?
+    - đơn vị thực hiện của hoàn thiện nội dung phiếu yêu cầu
+    - đơn vị thực hiện của việc hoàn thiện nội dung phiếu yêu cầu
+    - cho tôi biết đơn vị thực hiện của việc hoàn thiện nội dung PYC
+    - cho [anh](cust_sex) biết đơn vị thực hiện của việc hoàn thiện nội dung PYC
+    - cho [chị](cust_sex) biết đơn vị thực hiện của việc hoàn thiện nội dung PYC
+    - cho [em](cust_sex) biết đơn vị thực hiện của việc hoàn thiện nội dung PYC
+    - cho [mình](cust_sex) biết đơn vị thực hiện của việc hoàn thiện nội dung PYC
+    - tôi muốn biết đơn vị thực hiện của việc hoàn thiện nội dung PYC
+    - [anh](cust_sex) muốn biết đơn vị thực hiện của việc hoàn thiện nội dung PYC
+    - [chị](cust_sex) muốn biết đơn vị thực hiện của việc hoàn thiện nội dung PYC
+    - [em](cust_sex) muốn biết đơn vị thực hiện của việc hoàn thiện nội dung PYC
+    - [mình](cust_sex) muốn biết đơn vị thực hiện của việc hoàn thiện nội dung PYC
+
+- intent: TGTH_hoanthiennoidungPYC
+  examples: |
+    - mất bao lâu để hoàn thiện nội dung PYC
+    - mất bao lâu để hoàn thiện nội dung phiếu yêu cầu
+    - thời gian thực hiện hoàn thiện nội dung PYC
+    - thời gian thực hiện của việc hoàn thiện nội dung PYC
+    - thời gian thực hiện hoàn thiện nội dung PYC là bao lâu?
+    - thời gian thực hiện của việc hoàn thiện nội dung PYC là bao lâu?
+    - thời gian thực hiện hoàn thiện nội dung phiếu yêu cầu
+    - thời gian thực hiện của việc hoàn thiện nội dung phiếu yêu cầu
+    - cho tôi biết thời gian thực hiện của việc hoàn thiện nội dung PYC
+    - cho [anh](cust_sex) biết thời gian thực hiện của việc hoàn thiện nội dung PYC
+    - cho [chị](cust_sex) biết thời gian thực hiện của việc hoàn thiện nội dung PYC
+    - cho [em](cust_sex) biết thời gian thực hiện của việc hoàn thiện nội dung PYC
+    - cho [mình](cust_sex) biết thời gian thực hiện của việc hoàn thiện nội dung PYC
+    - tôi muốn biết thời gian thực hiện của việc hoàn thiện nội dung PYC
+    - [anh](cust_sex) muốn biết thời gian thực hiện của việc hoàn thiện nội dung PYC
+    - [chị](cust_sex) muốn biết thời gian thực hiện của việc hoàn thiện nội dung PYC
+    - [em](cust_sex) muốn biết thời gian thực hiện của việc hoàn thiện nội dung PYC
+    - [mình](cust_sex) muốn biết thời gian thực hiện của việc hoàn thiện nội dung PYC
+
+- intent: implementation_tool_hoanthiennoidungPYC
+  examples: |
+    - công cụ thực hiện hoàn thiện nội dung PYC
+    - công cụ thực hiện việc hoàn thiện nội dung PYC
+    - công cụ thực hiện hoàn thiện nội dung PYC là gì?
+    - công cụ thực hiện việc hoàn thiện nội dung PYC là gì?
+    - công cụ thực hiện của hoàn thiện nội dung phiếu yêu cầu
+    - công cụ thực hiện việc của hoàn thiện nội dung phiếu yêu cầu
+    - cho tôi biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - cho [anh](cust_sex) biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - cho [chị](cust_sex) biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - cho [em](cust_sex) biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - cho [mình](cust_sex) biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - tôi muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - [anh](cust_sex) muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - [chị](cust_sex) muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - [em](cust_sex) muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - [mình](cust_sex) muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+
+# I.4. Gửi PYC bản ký vào email tiếp nhận chung của TTCNTT
+- intent: purpose_guiPYCvaoEmail
+  examples: |
+    - mục dích của việc gửi PYC bản ký vào email
+    - mục dích của gửi PYC bản ký vào email
+    - mục dích của việc gửi PYC bản ký vào email là gì?
+    - mục dích của gửi PYC bản ký vào email là gì?
+    - mục dích của việc gửi phiếu yêu cầu bản ký vào email
+    - mục dích của gửi phiếu yêu cầu bản ký vào email
+    - cho tôi biết mục đích của việc gửi PYC bản ký vào email
+    - cho [anh](cust_sex) biết mục đích của việc gửi PYC bản ký vào email
+    - cho [chị](cust_sex) biết mục đích của việc gửi PYC bản ký vào email
+    - cho [em](cust_sex) biết mục đích của việc gửi PYC bản ký vào email
+    - cho [mình](cust_sex) biết mục đích của việc gửi PYC bản ký vào email
+    - tôi muốn biết mục đích của việc gửi PYC bản ký vào email
+    - [anh](cust_sex) muốn biết mục đích của việc gửi PYC bản ký vào email
+    - [chị](cust_sex) muốn biết mục đích của việc gửi PYC bản ký vào email
+    - [em](cust_sex) muốn biết mục đích của việc gửi PYC bản ký vào email
+    - [mình](cust_sex) muốn biết mục đích của việc gửi PYC bản ký vào email
+    - cho tôi biết mục đích của việc gửi phiếu yêu cầu bản ký vào email
+    - cho [anh](cust_sex) biết mục đích của việc gửi phiếu yêu cầu bản ký vào email
+    - cho [chị](cust_sex) biết mục đích của việc gửi phiếu yêu cầu bản ký vào email
+    - cho [em](cust_sex) biết mục đích của việc gửi phiếu yêu cầu bản ký vào email
+    - cho [mình](cust_sex) biết mục đích của việc gửi phiếu yêu cầu bản ký vào email
+    - tôi muốn biết mục đích của việc gửi phiếu yêu cầu bản ký vào email
+    - [anh](cust_sex) muốn biết mục đích của việc gửi phiếu yêu cầu bản ký vào email
+    - [chị](cust_sex) muốn biết mục đích của việc gửi phiếu yêu cầu bản ký vào email
+    - [em](cust_sex) muốn biết mục đích của việc gửi phiếu yêu cầu bản ký vào email
+    - [mình](cust_sex) muốn biết mục đích của việc gửi phiếu yêu cầu bản ký vào email
+
+- intent: dkkichhoat_guiPYCvaoEmail
+  examples: |
+    - điều kiện kích hoạt của gửi PYC bản ký vào email
+    - điều kiện kích hoạt của việc gửi PYC bản ký vào email
+    - điều kiện kích hoạt của gửi PYC bản ký vào email là gì?
+    - điều kiện kích hoạt của việc gửi PYC bản ký vào email là gì?
+    - cho tôi biết điều kiện kích hoạt của gửi PYC bản ký vào email
+    - cho [anh](cust_sex) biết điều kiện kích hoạt của gửi PYC bản ký vào email
+    - cho [chị](cust_sex) biết điều kiện kích hoạt của gửi PYC bản ký vào email
+    - cho [em](cust_sex) biết điều kiện kích hoạt của gửi PYC bản ký vào email
+    - cho [mình](cust_sex) biết điều kiện kích hoạt của gửi PYC bản ký vào email
+    - tôi muốn biết điều kiện kích hoạt của gửi PYC bản ký vào email
+    - [anh](cust_sex) muốn biết điều kiện kích hoạt của gửi PYC bản ký vào email
+    - [chị](cust_sex) muốn biết điều kiện kích hoạt của gửi PYC bản ký vào email
+    - [em](cust_sex) muốn biết điều kiện kích hoạt của gửi PYC bản ký vào email
+    - [mình](cust_sex) muốn biết điều kiện kích hoạt của gửi PYC bản ký vào email
+    - điều kiện kích hoạt của gửi phiếu yêu cầu bản ký vào email
+    - điều kiện kích hoạt của việc gửi phiếu yêu cầu bản ký vào email
+    - cho  tôi biết điều kiện kích hoạt của gửi phiếu yêu cầu bản ký vào email
+    - cho [anh](cust_sex) biết điều kiện kích hoạt của gửi phiếu yêu cầu bản ký vào email
+    - cho [chị](cust_sex) biết điều kiện kích hoạt của gửi phiếu yêu cầu bản ký vào email
+    - cho [em](cust_sex) biết điều kiện kích hoạt của gửi phiếu yêu cầu bản ký vào email
+    - cho [mình](cust_sex) biết điều kiện kích hoạt của gửi phiếu yêu cầu bản ký vào email
+    - tôi muốn biết điều kiện kích hoạt của gửi phiếu yêu cầu bản ký vào email
+    - [anh](cust_sex) muốn biết điều kiện kích hoạt của gửi phiếu yêu cầu bản ký vào email
+    - [chị](cust_sex) muốn biết điều kiện kích hoạt của gửi phiếu yêu cầu bản ký vào email
+    - [em](cust_sex) muốn biết điều kiện kích hoạt của gửi phiếu yêu cầu bản ký vào email
+    - [mình](cust_sex) muốn biết điều kiện kích hoạt của gửi phiếu yêu cầu bản ký vào email
+
+- intent: thongtindauvao_guiPYCvaoEmail
+  examples: |
+    - thông tin đầu vào của gửi PYC bản ký vào email
+    - thông tin đầu vào của việc gửi PYC bản ký vào email
+    - thông tin đầu vào của gửi PYC bản ký vào email là gì?
+    - thông tin đầu vào của việc gửi PYC bản ký vào email là gì?
+    - cho biết thông tin đầu vào của việc gửi PYC bản ký vào email
+    - cho tôi biết thông tin đầu vào của việc gửi PYC bản ký vào email
+    - cho [anh](cust_sex) biết thông tin đầu vào của việc gửi PYC bản ký vào email
+    - cho [chị](cust_sex) biết thông tin đầu vào của việc gửi PYC bản ký vào email
+    - cho [em](cust_sex) biết thông tin đầu vào của việc gửi PYC bản ký vào email
+    - cho [mình](cust_sex) biết thông tin đầu vào của việc gửi PYC bản ký vào email
+    - tôi muốn biết thông tin đầu vào của việc gửi PYC bản ký vào email
+    - [anh](cust_sex) muốn biết thông tin đầu vào của việc gửi PYC bản ký vào email
+    - [chị](cust_sex) muốn biết thông tin đầu vào của việc gửi PYC bản ký vào email
+    - [em](cust_sex) muốn biết thông tin đầu vào của việc gửi PYC bản ký vào email
+    - [mình](cust_sex) muốn biết thông tin đầu vào của việc gửi PYC bản ký vào email
+    - thông tin đầu vào của gửi phiếu yêu cầu bản ký vào email
+    - thông tin đầu vào của việc gửi phiếu yêu cầu bản ký vào email
+    - cho biết thông tin đầu vào của việc gửi phiếu yêu cầu bản ký vào email
+
+- intent: input_guiPYCvaoEmail
+  examples: |
+    - đầu vào của gửi PYC bản ký vào email
+    - đầu vào của việc gửi PYC bản ký vào email
+    - đầu vào của gửi PYC bản ký vào email là gì?
+    - đầu vào của việc gửi PYC bản ký vào email là gì?
+    - đầu vào của gửi phiếu yêu cầu bản ký vào email
+    - đầu vào của việc gửi phiếu yêu cầu bản ký vào email
+    - cho tôi biết đầu vào của việc làm rõ PYC bài toán
+    - cho [anh](cust_sex) biết đầu vào của việc gửi PYC bản ký vào email
+    - cho [chị](cust_sex) biết đầu vào của việc gửi PYC bản ký vào email
+    - cho [em](cust_sex) biết đầu vào của việc gửi PYC bản ký vào email
+    - cho [mình](cust_sex) biết đầu vào của việc gửi PYC bản ký vào email
+    - tôi muốn biết đầu vào của việc gửi PYC bản ký vào email
+    - [anh](cust_sex) muốn biết đầu vào của việc gửi PYC bản ký vào email
+    - [chị](cust_sex) muốn biết đầu vào của việc gửi PYC bản ký vào email
+    - [em](cust_sex) muốn biết đầu vào của việc gửi PYC bản ký vào email
+    - [mình](cust_sex) muốn biết đầu vào của việc gửi PYC bản ký vào email
+
+- intent: content_guiPYCvaoEmail
+  examples: |
+    - nội dung của gửi PYC bản ký vào email
+    - nội dung của việc gửi PYC bản ký vào email
+    - nội dung của gửi PYC bản ký vào email là gì?
+    - nội dung của việc gửi PYC bản ký vào email là gì?
+    - nội dung của gửi phiếu yêu cầu bản ký vào email
+    - nội dung của việc gửi phiếu yêu cầu bản ký vào email
+    - nội dung thực hiện của gửi PYC bản ký vào email
+    - nội dung thực hiện của việc gửi PYC bản ký vào email
+    - nội dung thực hiện của gửi PYC bản ký vào email là gì?
+    - nội dung thực hiện của việc gửi PYC bản ký vào email là gì?
+    - nội dung thực hiện của gửi phiếu yêu cầu bản ký vào email
+    - nội dung thực hiện của việc gửi phiếu yêu cầu bản ký vào email
+    - cho tôi biết nội dung của việc gửi PYC bản ký vào email
+    - cho [anh](cust_sex) biết nội dung của việc gửi PYC bản ký vào email
+    - cho [chị](cust_sex) biết nội dung của việc gửi PYC bản ký vào email
+    - cho [em](cust_sex) biết nội dung của việc gửi PYC bản ký vào email
+    - cho [mình](cust_sex) biết nội dung của việc gửi PYC bản ký vào email
+    - tôi muốn biết nội dung của việc gửi PYC bản ký vào email
+    - [anh](cust_sex) muốn biết nội dung của việc gửi PYC bản ký vào email
+    - [chị](cust_sex) muốn biết nội dung của việc gửi PYC bản ký vào email
+    - [em](cust_sex) muốn biết nội dung của việc gửi PYC bản ký vào email
+    - [mình](cust_sex) muốn biết nội dung của việc gửi PYC bản ký vào email
+
+- intent: output_guiPYCvaoEmail
+  examples: |
+    - đầu ra của gửi PYC bản ký vào email
+    - đầu ra của việc gửi PYC bản ký vào email
+    - đầu ra của gửi PYC bản ký vào email là gì?
+    - đầu ra của việc gửi PYC bản ký vào email là gì?
+    - đầu ra của gửi phiếu yêu cầu bản ký vào email
+    - đầu ra của việc gửi phiếu yêu cầu bản ký vào email
+    - cho tôi biết đầu ra của việc gửi PYC bản ký vào email
+    - cho [anh](cust_sex) biết đầu ra của việc gửi PYC bản ký vào email
+    - cho [chị](cust_sex) biết đầu ra của việc gửi PYC bản ký vào email
+    - cho [em](cust_sex) biết đầu ra của việc gửi PYC bản ký vào email
+    - cho [mình](cust_sex) biết đầu ra của việc gửi PYC bản ký vào email
+    - tôi muốn biết đầu ra của việc gửi PYC bản ký vào email
+    - [anh](cust_sex) muốn biết đầu ra của việc gửi PYC bản ký vào email
+    - [chị](cust_sex) muốn biết đầu ra của việc gửi PYC bản ký vào email
+    - [em](cust_sex) muốn biết đầu ra của việc gửi PYC bản ký vào email
+    - [mình](cust_sex) muốn biết đầu ra của việc gửi PYC bản ký vào email
+
+- intent: DVTH_guiPYCvaoEmail
+  examples: |
+    - đơn vị thực hiện của gửi PYC bản ký vào email
+    - đơn vị thực hiện của việc gửi PYC bản ký vào email
+    - đơn vị thực hiện của gửi PYC bản ký vào email là ai?
+    - đơn vị thực hiện của việc gửi PYC bản ký vào email là ai?
+    - đơn vị thực hiện của gửi phiếu yêu cầu bản ký vào email
+    - đơn vị thực hiện của việc gửi phiếu yêu cầu bản ký vào email
+    - cho tôi biết đơn vị thực hiện của việc gửi PYC bản ký vào email
+    - cho [anh](cust_sex) biết đơn vị thực hiện của việc gửi PYC bản ký vào email
+    - cho [chị](cust_sex) biết đơn vị thực hiện của việc gửi PYC bản ký vào email
+    - cho [em](cust_sex) biết đơn vị thực hiện của việc gửi PYC bản ký vào email
+    - cho [mình](cust_sex) biết đơn vị thực hiện của việc gửi PYC bản ký vào email
+    - tôi muốn biết đơn vị thực hiện của việc gửi PYC bản ký vào email
+    - [anh](cust_sex) muốn biết đơn vị thực hiện của việc gửi PYC bản ký vào email
+    - [chị](cust_sex) muốn biết đơn vị thực hiện của việc gửi PYC bản ký vào email
+    - [em](cust_sex) muốn biết đơn vị thực hiện của việc gửi PYC bản ký vào email
+    - [mình](cust_sex) muốn biết đơn vị thực hiện của việc gửi PYC bản ký vào email
+
+- intent: TGTH_guiPYCvaoEmail
+  examples: |
+    - mất bao lâu để gửi PYC bản ký vào email
+    - mất bao lâu để gửi phiếu yêu cầu bản ký vào email
+    - thời gian thực hiện gửi PYC bản ký vào email
+    - thời gian thực hiện của việc gửi PYC bản ký vào email
+    - thời gian thực hiện gửi PYC bản ký vào email là bao lâu?
+    - thời gian thực hiện của việc gửi PYC bản ký vào email là bao lâu?
+    - thời gian thực hiện gửi phiếu yêu cầu bản ký vào email
+    - thời gian thực hiện của việc gửi phiếu yêu cầu bản ký vào email
+    - cho tôi biết thời gian thực hiện của việc gửi PYC bản ký vào email
+    - cho [anh](cust_sex) biết thời gian thực hiện của việc gửi PYC bản ký vào email
+    - cho [chị](cust_sex) biết thời gian thực hiện của việc gửi PYC bản ký vào email
+    - cho [em](cust_sex) biết thời gian thực hiện của việc gửi PYC bản ký vào email
+    - cho [mình](cust_sex) biết thời gian thực hiện của việc gửi PYC bản ký vào email
+    - tôi muốn biết thời gian thực hiện của việc gửi PYC bản ký vào email
+    - [anh](cust_sex) muốn biết thời gian thực hiện của việc gửi PYC bản ký vào email
+    - [chị](cust_sex) muốn biết thời gian thực hiện của việc gửi PYC bản ký vào email
+    - [em](cust_sex) muốn biết thời gian thực hiện của việc gửi PYC bản ký vào email
+    - [mình](cust_sex) muốn biết thời gian thực hiện của việc gửi PYC bản ký vào email
+
+- intent: implementation_tool_guiPYCvaoEmail
+  examples: |
+    - công cụ thực hiện gửi PYC bản ký vào email
+    - công cụ thực hiện việc gửi PYC bản ký vào email
+    - công cụ thực hiện gửi PYC bản ký vào email là gì?
+    - công cụ thực hiện việc gửi PYC bản ký vào email là gì?
+    - công cụ thực hiện của gửi phiếu yêu cầu bản ký vào email
+    - công cụ thực hiện việc của gửi phiếu yêu cầu bản ký vào email
+    - cho tôi biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - cho [anh](cust_sex) biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - cho [chị](cust_sex) biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - cho [em](cust_sex) biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - cho [mình](cust_sex) biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - tôi muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - [anh](cust_sex) muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - [chị](cust_sex) muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - [em](cust_sex) muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - [mình](cust_sex) muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+
+# I.5. Phân bổ PYC cho BA chuyên trách
+- intent: purpose_phanboPYCchoBA
+  examples: |
+    - mục dích của việc Phân bổ PYC cho BA chuyên trách
+    - mục dích của Phân bổ PYC cho BA chuyên trách
+    - mục dích của việc Phân bổ PYC cho BA chuyên trách là gì?
+    - mục dích của Phân bổ PYC cho BA chuyên trách là gì?
+    - mục dích của việc Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - mục dích của Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - cho tôi biết mục đích của việc Phân bổ PYC cho BA chuyên trách
+    - cho [anh](cust_sex) biết mục đích của việc Phân bổ PYC cho BA chuyên trách
+    - cho [chị](cust_sex) biết mục đích của việc Phân bổ PYC cho BA chuyên trách
+    - cho [em](cust_sex) biết mục đích của việc Phân bổ PYC cho BA chuyên trách
+    - cho [mình](cust_sex) biết mục đích của việc Phân bổ PYC cho BA chuyên trách
+    - tôi muốn biết mục đích của việc Phân bổ PYC cho BA chuyên trách
+    - [anh](cust_sex) muốn biết mục đích của việc Phân bổ PYC cho BA chuyên trách
+    - [chị](cust_sex) muốn biết mục đích của việc Phân bổ PYC cho BA chuyên trách
+    - [em](cust_sex) muốn biết mục đích của việc Phân bổ PYC cho BA chuyên trách
+    - [mình](cust_sex) muốn biết mục đích của việc Phân bổ PYC cho BA chuyên trách
+    - cho tôi biết mục đích của việc Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - cho [anh](cust_sex) biết mục đích của việc Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - cho [chị](cust_sex) biết mục đích của việc Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - cho [em](cust_sex) biết mục đích của việc Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - cho [mình](cust_sex) biết mục đích của việc Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - tôi muốn biết mục đích của việc Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - [anh](cust_sex) muốn biết mục đích của việc Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - [chị](cust_sex) muốn biết mục đích của việc Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - [em](cust_sex) muốn biết mục đích của việc Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - [mình](cust_sex) muốn biết mục đích của việc Phân bổ phiếu yêu cầu cho BA chuyên trách
+
+- intent: dkkichhoat_phanboPYCchoBA
+  examples: |
+    - điều kiện kích hoạt của Phân bổ PYC cho BA chuyên trách
+    - điều kiện kích hoạt của việc Phân bổ PYC cho BA chuyên trách
+    - điều kiện kích hoạt của Phân bổ PYC cho BA chuyên trách là gì?
+    - điều kiện kích hoạt của việc Phân bổ PYC cho BA chuyên trách là gì?
+    - cho tôi biết điều kiện kích hoạt của Phân bổ PYC cho BA chuyên trách
+    - cho [anh](cust_sex) biết điều kiện kích hoạt của Phân bổ PYC cho BA chuyên trách
+    - cho [chị](cust_sex) biết điều kiện kích hoạt của Phân bổ PYC cho BA chuyên trách
+    - cho [em](cust_sex) biết điều kiện kích hoạt của Phân bổ PYC cho BA chuyên trách
+    - cho [mình](cust_sex) biết điều kiện kích hoạt của Phân bổ PYC cho BA chuyên trách
+    - tôi muốn biết điều kiện kích hoạt của Phân bổ PYC cho BA chuyên trách
+    - [anh](cust_sex) muốn biết điều kiện kích hoạt của Phân bổ PYC cho BA chuyên trách
+    - [chị](cust_sex) muốn biết điều kiện kích hoạt của Phân bổ PYC cho BA chuyên trách
+    - [em](cust_sex) muốn biết điều kiện kích hoạt của Phân bổ PYC cho BA chuyên trách
+    - [mình](cust_sex) muốn biết điều kiện kích hoạt của Phân bổ PYC cho BA chuyên trách
+    - điều kiện kích hoạt của Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - điều kiện kích hoạt của việc Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - cho  tôi biết điều kiện kích hoạt của Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - cho [anh](cust_sex) biết điều kiện kích hoạt của Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - cho [chị](cust_sex) biết điều kiện kích hoạt của Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - cho [em](cust_sex) biết điều kiện kích hoạt của Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - cho [mình](cust_sex) biết điều kiện kích hoạt của Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - tôi muốn biết điều kiện kích hoạt của Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - [anh](cust_sex) muốn biết điều kiện kích hoạt của Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - [chị](cust_sex) muốn biết điều kiện kích hoạt của Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - [em](cust_sex) muốn biết điều kiện kích hoạt của Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - [mình](cust_sex) muốn biết điều kiện kích hoạt của Phân bổ phiếu yêu cầu cho BA chuyên trách
+
+- intent: thongtindauvao_phanboPYCchoBA
+  examples: |
+    - thông tin đầu vào của Phân bổ PYC cho BA chuyên trách
+    - thông tin đầu vào của việc Phân bổ PYC cho BA chuyên trách
+    - thông tin đầu vào của Phân bổ PYC cho BA chuyên trách là gì?
+    - thông tin đầu vào của việc Phân bổ PYC cho BA chuyên trách là gì?
+    - cho biết thông tin đầu vào của việc Phân bổ PYC cho BA chuyên trách
+    - cho tôi biết thông tin đầu vào của việc Phân bổ PYC cho BA chuyên trách
+    - cho [anh](cust_sex) biết thông tin đầu vào của việc Phân bổ PYC cho BA chuyên trách
+    - cho [chị](cust_sex) biết thông tin đầu vào của việc Phân bổ PYC cho BA chuyên trách
+    - cho [em](cust_sex) biết thông tin đầu vào của việc Phân bổ PYC cho BA chuyên trách
+    - cho [mình](cust_sex) biết thông tin đầu vào của việc Phân bổ PYC cho BA chuyên trách
+    - tôi muốn biết thông tin đầu vào của việc Phân bổ PYC cho BA chuyên trách
+    - [anh](cust_sex) muốn biết thông tin đầu vào của việc Phân bổ PYC cho BA chuyên trách
+    - [chị](cust_sex) muốn biết thông tin đầu vào của việc Phân bổ PYC cho BA chuyên trách
+    - [em](cust_sex) muốn biết thông tin đầu vào của việc Phân bổ PYC cho BA chuyên trách
+    - [mình](cust_sex) muốn biết thông tin đầu vào của việc Phân bổ PYC cho BA chuyên trách
+    - thông tin đầu vào của Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - thông tin đầu vào của việc Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - cho biết thông tin đầu vào của việc Phân bổ phiếu yêu cầu cho BA chuyên trách
+
+- intent: input_phanboPYCchoBA
+  examples: |
+    - đầu vào của Phân bổ PYC cho BA chuyên trách
+    - đầu vào của việc Phân bổ PYC cho BA chuyên trách
+    - đầu vào của Phân bổ PYC cho BA chuyên trách là gì?
+    - đầu vào của việc Phân bổ PYC cho BA chuyên trách là gì?
+    - đầu vào của Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - đầu vào của việc Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - cho tôi biết đầu vào của việc làm rõ PYC bài toán
+    - cho [anh](cust_sex) biết đầu vào của việc Phân bổ PYC cho BA chuyên trách
+    - cho [chị](cust_sex) biết đầu vào của việc Phân bổ PYC cho BA chuyên trách
+    - cho [em](cust_sex) biết đầu vào của việc Phân bổ PYC cho BA chuyên trách
+    - cho [mình](cust_sex) biết đầu vào của việc Phân bổ PYC cho BA chuyên trách
+    - tôi muốn biết đầu vào của việc Phân bổ PYC cho BA chuyên trách
+    - [anh](cust_sex) muốn biết đầu vào của việc Phân bổ PYC cho BA chuyên trách
+    - [chị](cust_sex) muốn biết đầu vào của việc Phân bổ PYC cho BA chuyên trách
+    - [em](cust_sex) muốn biết đầu vào của việc Phân bổ PYC cho BA chuyên trách
+    - [mình](cust_sex) muốn biết đầu vào của việc Phân bổ PYC cho BA chuyên trách
+
+- intent: content_phanboPYCchoBA
+  examples: |
+    - nội dung của Phân bổ PYC cho BA chuyên trách
+    - nội dung của việc Phân bổ PYC cho BA chuyên trách
+    - nội dung của Phân bổ PYC cho BA chuyên trách là gì?
+    - nội dung của việc Phân bổ PYC cho BA chuyên trách là gì?
+    - nội dung của Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - nội dung của việc Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - nội dung thực hiện của Phân bổ PYC cho BA chuyên trách
+    - nội dung thực hiện của việc Phân bổ PYC cho BA chuyên trách
+    - nội dung thực hiện của Phân bổ PYC cho BA chuyên trách là gì?
+    - nội dung thực hiện của việc Phân bổ PYC cho BA chuyên trách là gì?
+    - nội dung thực hiện của Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - nội dung thực hiện của việc Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - cho tôi biết nội dung của việc Phân bổ PYC cho BA chuyên trách
+    - cho [anh](cust_sex) biết nội dung của việc Phân bổ PYC cho BA chuyên trách
+    - cho [chị](cust_sex) biết nội dung của việc Phân bổ PYC cho BA chuyên trách
+    - cho [em](cust_sex) biết nội dung của việc Phân bổ PYC cho BA chuyên trách
+    - cho [mình](cust_sex) biết nội dung của việc Phân bổ PYC cho BA chuyên trách
+    - tôi muốn biết nội dung của việc Phân bổ PYC cho BA chuyên trách
+    - [anh](cust_sex) muốn biết nội dung của việc Phân bổ PYC cho BA chuyên trách
+    - [chị](cust_sex) muốn biết nội dung của việc Phân bổ PYC cho BA chuyên trách
+    - [em](cust_sex) muốn biết nội dung của việc Phân bổ PYC cho BA chuyên trách
+    - [mình](cust_sex) muốn biết nội dung của việc Phân bổ PYC cho BA chuyên trách
+
+- intent: output_phanboPYCchoBA
+  examples: |
+    - đầu ra của Phân bổ PYC cho BA chuyên trách
+    - đầu ra của việc Phân bổ PYC cho BA chuyên trách
+    - đầu ra của Phân bổ PYC cho BA chuyên trách là gì?
+    - đầu ra của việc Phân bổ PYC cho BA chuyên trách là gì?
+    - đầu ra của Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - đầu ra của việc Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - cho tôi biết đầu ra của việc Phân bổ PYC cho BA chuyên trách
+    - cho [anh](cust_sex) biết đầu ra của việc Phân bổ PYC cho BA chuyên trách
+    - cho [chị](cust_sex) biết đầu ra của việc Phân bổ PYC cho BA chuyên trách
+    - cho [em](cust_sex) biết đầu ra của việc Phân bổ PYC cho BA chuyên trách
+    - cho [mình](cust_sex) biết đầu ra của việc Phân bổ PYC cho BA chuyên trách
+    - tôi muốn biết đầu ra của việc Phân bổ PYC cho BA chuyên trách
+    - [anh](cust_sex) muốn biết đầu ra của việc Phân bổ PYC cho BA chuyên trách
+    - [chị](cust_sex) muốn biết đầu ra của việc Phân bổ PYC cho BA chuyên trách
+    - [em](cust_sex) muốn biết đầu ra của việc Phân bổ PYC cho BA chuyên trách
+    - [mình](cust_sex) muốn biết đầu ra của việc Phân bổ PYC cho BA chuyên trách
+
+- intent: DVTH_phanboPYCchoBA
+  examples: |
+    - đơn vị thực hiện của Phân bổ PYC cho BA chuyên trách
+    - đơn vị thực hiện của việc Phân bổ PYC cho BA chuyên trách
+    - đơn vị thực hiện của Phân bổ PYC cho BA chuyên trách là ai?
+    - đơn vị thực hiện của việc Phân bổ PYC cho BA chuyên trách là ai?
+    - đơn vị thực hiện của Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - đơn vị thực hiện của việc Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - cho tôi biết đơn vị thực hiện của việc Phân bổ PYC cho BA chuyên trách
+    - cho [anh](cust_sex) biết đơn vị thực hiện của việc Phân bổ PYC cho BA chuyên trách
+    - cho [chị](cust_sex) biết đơn vị thực hiện của việc Phân bổ PYC cho BA chuyên trách
+    - cho [em](cust_sex) biết đơn vị thực hiện của việc Phân bổ PYC cho BA chuyên trách
+    - cho [mình](cust_sex) biết đơn vị thực hiện của việc Phân bổ PYC cho BA chuyên trách
+    - tôi muốn biết đơn vị thực hiện của việc Phân bổ PYC cho BA chuyên trách
+    - [anh](cust_sex) muốn biết đơn vị thực hiện của việc Phân bổ PYC cho BA chuyên trách
+    - [chị](cust_sex) muốn biết đơn vị thực hiện của việc Phân bổ PYC cho BA chuyên trách
+    - [em](cust_sex) muốn biết đơn vị thực hiện của việc Phân bổ PYC cho BA chuyên trách
+    - [mình](cust_sex) muốn biết đơn vị thực hiện của việc Phân bổ PYC cho BA chuyên trách
+
+- intent: TGTH_phanboPYCchoBA
+  examples: |
+    - mất bao lâu để Phân bổ PYC cho BA chuyên trách
+    - mất bao lâu để Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - thời gian thực hiện Phân bổ PYC cho BA chuyên trách
+    - thời gian thực hiện của việc Phân bổ PYC cho BA chuyên trách
+    - thời gian thực hiện Phân bổ PYC cho BA chuyên trách là bao lâu?
+    - thời gian thực hiện của việc Phân bổ PYC cho BA chuyên trách là bao lâu?
+    - thời gian thực hiện Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - thời gian thực hiện của việc Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - cho tôi biết thời gian thực hiện của việc Phân bổ PYC cho BA chuyên trách
+    - cho [anh](cust_sex) biết thời gian thực hiện của việc Phân bổ PYC cho BA chuyên trách
+    - cho [chị](cust_sex) biết thời gian thực hiện của việc Phân bổ PYC cho BA chuyên trách
+    - cho [em](cust_sex) biết thời gian thực hiện của việc Phân bổ PYC cho BA chuyên trách
+    - cho [mình](cust_sex) biết thời gian thực hiện của việc Phân bổ PYC cho BA chuyên trách
+    - tôi muốn biết thời gian thực hiện của việc Phân bổ PYC cho BA chuyên trách
+    - [anh](cust_sex) muốn biết thời gian thực hiện của việc Phân bổ PYC cho BA chuyên trách
+    - [chị](cust_sex) muốn biết thời gian thực hiện của việc Phân bổ PYC cho BA chuyên trách
+    - [em](cust_sex) muốn biết thời gian thực hiện của việc Phân bổ PYC cho BA chuyên trách
+    - [mình](cust_sex) muốn biết thời gian thực hiện của việc Phân bổ PYC cho BA chuyên trách
+
+- intent: implementation_tool_phanboPYCchoBA
+  examples: |
+    - công cụ thực hiện Phân bổ PYC cho BA chuyên trách
+    - công cụ thực hiện việc Phân bổ PYC cho BA chuyên trách
+    - công cụ thực hiện Phân bổ PYC cho BA chuyên trách là gì?
+    - công cụ thực hiện việc Phân bổ PYC cho BA chuyên trách là gì?
+    - công cụ thực hiện của Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - công cụ thực hiện việc của Phân bổ phiếu yêu cầu cho BA chuyên trách
+    - cho tôi biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - cho [anh](cust_sex) biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - cho [chị](cust_sex) biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - cho [em](cust_sex) biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - cho [mình](cust_sex) biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - tôi muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - [anh](cust_sex) muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - [chị](cust_sex) muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - [em](cust_sex) muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+    - [mình](cust_sex) muốn biết công cụ thực hiện việc gửi bản dự thảo PYC phần mềm
+
+
+- intent: bot_challenge
+  examples: |
+    - are you a bot?
+    - are you a human?
+    - am I talking to a bot?
+    - am I talking to a human?
+    - bạn có phải robot không?
+    - tôi có đang nói chuyện với robot không?
+    - bạn có phải con người không?
+    - tôi có đang nói chuyện với con người không?
+
+
